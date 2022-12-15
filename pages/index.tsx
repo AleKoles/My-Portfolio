@@ -1,6 +1,8 @@
 import Head from "next/head";
-
+import { AiOutlineMail, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import Image from "next/image";
+import avatar from "../public/Kolesnikova.jpg";
 
 export default function Home() {
   return (
@@ -13,17 +15,18 @@ export default function Home() {
       <main>
         <section>
           <nav className="py-8 px-2 md:px-4 flex justify-between">
-            <h1 className="font-bold uppercase">Developer Portfolio</h1>
+            <h1 className="font-bold uppercase text-md tracking-wide">
+              <span className="hidden sm:inline">Developer</span> Portfolio
+            </h1>
             <ul className="flex justify content-between gap-8 font-semibold">
               <li className="mt-1 cursor-pointer">
                 <BsFillMoonStarsFill />
               </li>
               <li>Skills</li>
               <li>Works</li>
-              <li>Contact Me</li>
               <li>
                 <a
-                  className="box-border px-2 py-1 border-2 rounded border-amber-400 text-white bg-amber-400 hover:text-amber-400 hover:bg-white"
+                  className="box-border px-2 py-1 border-2 rounded border-fuchsia-700 text-white bg-fuchsia-700 hover:text-fuchsia-700 hover:bg-white"
                   href="#"
                 >
                   Resume
@@ -32,11 +35,25 @@ export default function Home() {
             </ul>
           </nav>
         </section>
-        <section className="bg-amber-400 h-fit lg:h-screen">
-          <h1 className="font-bold text-5xl tracking-wide">
-            Oleksandra Kolesnikova
-          </h1>
-          <h2 className="font-semibold text-3xl">Frontend Developer</h2>
+        <section className="h-fit">
+          <div className="text-center p-10">
+            <h2 className="font-bold text-5xl text-fuchsia-700 tracking-wide py-2">
+              Oleksandra Kolesnikova
+            </h2>
+            <h3 className="font-semibold text-3xl py-2">Frontend Developer</h3>
+            <p className="py-5 text-lg text-gray-600 leading-8">
+              A frontend developer passionate about web content design and
+              delivering outstanding user experience.
+            </p>
+          </div>
+          <div className="text-4xl text-gray-600 flex justify-center gap-16 py-3">
+            <AiFillLinkedin />
+            <AiFillGithub />
+            <AiOutlineMail />
+          </div>
+          <div className="relative rounded-full w-72 h-72 mx-auto mt-12 overflow-hidden">
+            <Image src={avatar} />
+          </div>
         </section>
       </main>
     </>
