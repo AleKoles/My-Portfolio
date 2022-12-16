@@ -3,19 +3,7 @@ import { AiOutlineMail, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import Image from "next/image";
 import avatar from "../public/Kolesnikova.jpg";
-import ps from "../public/ps.png";
-import figma from "../public/figma.svg";
-import bs from "../public/bootstrap.png";
-import css from "../public/css.png";
-import gh from "../public/github.png";
-import html5 from "../public/html.png";
-import js from "../public/javascript.png";
-import next from "../public/next.svg";
-import react from "../public/react.svg";
-import sass from "../public/sass.png";
-import tailwind from "../public/tailwind.svg";
-import gsap from "../public/gsap.png";
-import barba from "../public/barba.png";
+import Tabs from "./tabs";
 
 export default function Home() {
   return (
@@ -48,124 +36,31 @@ export default function Home() {
             </ul>
           </nav>
         </section>
-        <section className="h-fit">
-          <div className="text-center p-10">
+        <section className="h-fit mt-4">
+          <div className="text-center p-6">
             <h2 className="font-bold text-4xl md:text-5xl text-fuchsia-700 tracking-wide py-2">
               Oleksandra Kolesnikova
             </h2>
             <h3 className="font-semibold text-2xl md:text-3xl py-2">
-              Frontend Developer
+              Frontend Developer and Web Content Designer
             </h3>
-            <p className="py-5 text-md lg:text-lg text-gray-600 leading-8">
-              A frontend developer passionate about web content design and
-              delivering outstanding user experience.
-            </p>
           </div>
           <div className="text-4xl text-gray-600 flex justify-center gap-16 py-3">
             <AiFillLinkedin />
             <AiFillGithub />
             <AiOutlineMail />
           </div>
-          <div className="relative rounded-full w-72 h-72 mx-auto mt-12 mb-8 overflow-hidden">
+          <div className="relative rounded-full w-72 h-72 mx-auto mt-10 mb-12 overflow-hidden">
             <Image src={avatar} alt="Oleksandra Kolesnikova" />
           </div>
         </section>
-
+        <Tabs />
         <section>
-          <h3 className="font-semibold text-2xl md:text-3xl py-2">What I Do</h3>
-          <p className="py-5 mb-4 text-md lg:text-lg text-gray-600 leading-8">
-            I develop SEO friendly websites with responsive design and top-notch
-            content readability.
-          </p>
-          <div>
+          <div className="text-center">
             <h3 className="font-semibold text-2xl md:text-3xl py-2">
-              My Toolbox
+              Have a Look at my Works
             </h3>
-            <div>
-              <ul>
-                <li>HTML, CSS, Sass</li>
-                <li>Bootstrap, Tailwind CSS</li>
-                <li>JS, React, Next</li>
-                <li>GreenSock, Barba.js</li>
-                <li>Github, Git</li>
-                <li>Photoshop, Figma</li>
-                <li>Jira, Confluence, Trello, Notion</li>
-              </ul>
-            </div>
-            <div className="flex justify-between align-middle flex-wrap gap-4 py-5 mb-4">
-              <Image
-                src={html5}
-                className="w-10 h-10 md:w-12 md:h-12"
-                alt="html5"
-              />
-              <Image
-                src={css}
-                className="w-10 h-10 md:w-12 md:h-12"
-                alt="css"
-              />
-              <Image
-                src={sass}
-                className="w-8 h-8 md:w-10 md:h-10"
-                alt="Sass"
-              />
-              <Image
-                src={bs}
-                className="w-10 h-10 md:w-12 md:h-12"
-                alt="Bootstrap"
-              />
-              <Image
-                src={tailwind}
-                className="w-10 h-10 md:w-12 md:h-12"
-                alt="TailwindCSS"
-              />
-              <Image
-                src={js}
-                className="w-10 h-10 md:w-12 md:h-12"
-                alt="JavaScript"
-              />
-              <Image
-                src={gsap}
-                className="w-10 h-10 md:w-12 md:h-12"
-                alt="GreenSock"
-              />
-              <Image
-                src={barba}
-                className="w-8 h-8 md:w-10 md:h-10"
-                alt="Barba.js"
-              />
-              <Image
-                src={react}
-                className="w-10 h-10 md:w-12 md:h-12"
-                alt="React"
-              />
-              <Image
-                src={next}
-                className="w-10 h-10 md:w-12 md:h-12"
-                alt="Next.js"
-              />
-              <Image
-                src={gh}
-                className="w-10 h-10 md:w-12 md:h-12"
-                alt="github"
-              />
-              <Image
-                src={ps}
-                className="w-8 h-8 md:w-10 md:h-10"
-                alt="Photoshop"
-              />
-              <Image
-                src={figma}
-                className="w-8 h-8 md:w-10 md:h-10"
-                alt="Figma"
-              />
-            </div>
           </div>
-        </section>
-
-        <section>
-          <h3 className="font-semibold text-2xl md:text-3xl py-2">
-            Have a Look at my Works
-          </h3>
         </section>
       </main>
     </>
