@@ -4,6 +4,7 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 import Image from "next/image";
 import avatar from "../public/Kolesnikova.jpg";
 import Tabs from "./tabs";
+import Works from "./works";
 
 export default function Home() {
   return (
@@ -23,8 +24,6 @@ export default function Home() {
               <li className="mt-1 cursor-pointer">
                 <BsFillMoonStarsFill />
               </li>
-              <li>Skills</li>
-              <li>Works</li>
               <li>
                 <a
                   className="box-border px-2 py-1 border-2 rounded border-fuchsia-700 text-white bg-fuchsia-700 hover:text-fuchsia-700 hover:bg-white"
@@ -46,22 +45,16 @@ export default function Home() {
             </h3>
           </div>
           <div className="text-4xl text-gray-600 flex justify-center gap-16 py-3">
-            <AiFillLinkedin />
-            <AiFillGithub />
-            <AiOutlineMail />
+            <AiFillLinkedin className="hover:scale-110 hover:text-black" />
+            <AiFillGithub className="hover:scale-110 hover:text-black" />
+            <AiOutlineMail className="hover:scale-110 hover:text-black" />
           </div>
           <div className="relative rounded-full w-72 h-72 mx-auto mt-10 mb-12 overflow-hidden">
             <Image src={avatar} alt="Oleksandra Kolesnikova" />
           </div>
         </section>
         <Tabs />
-        <section>
-          <div className="text-center">
-            <h3 className="font-semibold text-2xl md:text-3xl py-2">
-              Have a Look at my Works
-            </h3>
-          </div>
-        </section>
+        <Works />
       </main>
     </>
   );
