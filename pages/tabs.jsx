@@ -27,8 +27,8 @@ const Tabs = () => {
                 className={
                   "font-semibold text-2xl md:text-3xl px-5 py-3  block leading-normal " +
                   (openTab === 1
-                    ? "text-black border-b-4 border-fuchsia-700"
-                    : "text-gray-600")
+                    ? "text-black border-b-4 border-fuchsia-700 dark:border-amber-400 dark:text-white"
+                    : "text-gray-600 dark:text-gray-200")
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -46,8 +46,8 @@ const Tabs = () => {
                 className={
                   "font-semibold text-2xl md:text-3xl px-5 py-3 block leading-normal " +
                   (openTab === 2
-                    ? "text-black border-b-4 border-fuchsia-700"
-                    : "text-gray-600")
+                    ? "text-black border-b-4 border-fuchsia-700 dark:border-amber-400 dark:text-white"
+                    : "text-gray-600 dark:text-gray-200")
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -61,11 +61,11 @@ const Tabs = () => {
               </a>
             </li>
           </ul>
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6">
+          <div className="relative flex flex-col min-w-0 break-words w-full mb-6">
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <p className="py-5 text-md lg:text-lg text-gray-600 leading-8">
+                  <p className="py-5 text-md lg:text-lg text-gray-600 dark:text-white leading-8">
                     I am a frontend developer passionate about web content
                     creation and delivering outstanding user experience. I
                     develop SEO friendly websites with responsive design, fun
@@ -74,51 +74,51 @@ const Tabs = () => {
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                   <div className="flex justify-between align-middle flex-wrap gap-4 py-5">
-                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black">
+                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <AiOutlineHtml5 className="text-4xl mx-auto" />
                       <p>HTML5</p>
                     </div>
-                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black">
+                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiCss3 className="text-4xl mx-auto" />
                       <p>CSS</p>
                     </div>
-                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black">
+                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <DiSass className="text-4xl mx-auto" />
                       <p>Sass</p>
                     </div>
-                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black">
+                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <BsBootstrap className="text-4xl mx-auto" />
                       <p>Bootstrap</p>
                     </div>
-                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black">
+                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiTailwindcss className="text-4xl mx-auto" />
                       <p>Tailwind</p>
                     </div>
-                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black">
+                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiJavascript className="text-4xl mx-auto" />
                       <p>JavaScript</p>
                     </div>
-                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black">
+                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiReact className="text-4xl mx-auto" />
                       <p>React</p>
                     </div>
-                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black">
+                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiNextdotjs className="text-4xl mx-auto" />
                       <p>Next.js</p>
                     </div>
-                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black">
+                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiGreensock className="text-4xl mx-auto" />
                       <p>GSAP</p>
                     </div>
-                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black">
+                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <AiFillGithub className="text-4xl mx-auto" />
                       <p>GitHub</p>
                     </div>
-                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black">
+                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiFigma className="text-4xl mx-auto" />
                       <p>Figma</p>
                     </div>
-                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black">
+                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <DiPhotoshop className="text-4xl mx-auto" />
                       <p>Photoshop</p>
                     </div>
