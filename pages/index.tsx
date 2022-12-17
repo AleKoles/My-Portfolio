@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import avatar from "../public/Kolesnikova.jpg";
 import avatarDark from "../public/Kolesnikova2.png";
+import Link from "next/link";
 import Tabs from "./tabs";
 import Works from "./works";
 
@@ -31,23 +32,17 @@ export default function Home() {
                   onClick={() => setDarkMode(!darkMode)}
                 />
                 <SlMagicWand
-                  className="text-2xl -mt-2 text-white hidden dark:inline"
+                  className="text-2xl -mt-1 text-white hidden dark:inline"
                   onClick={() => setDarkMode(!darkMode)}
                 />
               </li>
               <li>
-                <a
-                  className="dark:hidden box-border px-2 py-1 border-2 rounded border-fuchsia-700 text-white bg-fuchsia-700 hover:text-fuchsia-700 hover:bg-white"
-                  href="#"
+                <Link
+                  className="box-border px-2 py-1 border-2 rounded border-fuchsia-700 dark:border-amber-400 text-white dark:text-gray-500 bg-fuchsia-700 dark:bg-amber-400 hover:text-fuchsia-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-gray-500"
+                  href="https://drive.google.com/uc?export=download&id=15pNDxQcJxCk4G0rRf4Koridxd81vZeEu"
                 >
                   Resume
-                </a>
-                <a
-                  className="hidden dark:inline box-border px-2 py-1 border-2 rounded border-amber-400 text-gray-500 bg-amber-400 hover:text-amber-400 hover:bg-gray-500"
-                  href="#"
-                >
-                  Resume
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
