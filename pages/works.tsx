@@ -54,7 +54,7 @@ const Works = () => {
           />
           <div className="absolute transform lg:translate-y-3/4 group-hover:translate-y-0 transition-all duration-300 bottom-0 left-0 w-full flex flex-col gap-4 px-4 py-4 bg-white bg-opacity-80 sm:bg-opacity-90">
             <span className="lg:group-hover:mb-0 text-lg md:text-3xl font-semibold group-hover:pb-0 transition-all duration-300">
-              Animator's Portfolio
+              Animator&apos;s Portfolio
             </span>
             <span className="hidden sm:block lg:opacity-0 group-hover:opacity-100 transition-all duration-300 text-gray-600 leading-6 lg:leading-8">
               A muti-page cv/portfolio for a CG artist made with React and
