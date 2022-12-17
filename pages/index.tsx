@@ -17,7 +17,7 @@ export default function Home() {
       <main className="px-8 dark:bg-gray-900 md:px-16 lg:px-40">
         <section>
           <nav className="py-8 md:px-2 flex justify-between">
-            <h1 className="font-bold uppercase text-md tracking-wide">
+            <h1 className="font-bold uppercase text-lg tracking-wide">
               <span className="hidden sm:inline">Developer</span> Portfolio
             </h1>
             <ul className="flex justify content-between gap-8 font-semibold">
