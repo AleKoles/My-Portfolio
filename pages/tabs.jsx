@@ -68,8 +68,8 @@ const Tabs = () => {
                   <p className="py-5 text-md lg:text-lg text-gray-600 dark:text-white leading-8">
                     I am a frontend developer passionate about web content
                     creation and delivering outstanding user experience. I
-                    develop SEO friendly websites with responsive design, fun
-                    animations, and top-notch content readability.
+                    develop SEO friendly websites optimized for speed and
+                    readability with responsive design, and fun animations.
                   </p>
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
