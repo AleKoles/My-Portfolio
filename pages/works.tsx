@@ -1,7 +1,7 @@
 import Image from "next/image";
-import weather from "../public/weather.png";
-import dictionary from "../public/dictionary.png";
-import animator from "../public/animator-portfolio.png";
+import weather from "../public/weather.webp";
+import dictionary from "../public/dictionary.webp";
+import animator from "../public/animator-portfolio.webp";
 
 const Works = () => {
   return (
