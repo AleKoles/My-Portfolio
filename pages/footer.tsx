@@ -6,6 +6,7 @@ const Footer = () => {
       <a
         href="https://github.com/AleKoles/My-Portfolio"
         target="_blank"
+        rel="noreferrer"
         className=" w-fit flex flex-col justify-center text-gray-600 hover:text-black dark:text-gray-200 dark:hover:text-white"
       >
         <FiGithub className="text-2xl mx-auto" />
