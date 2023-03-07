@@ -10,6 +10,7 @@ import avatarDark from "../public/Kolesnikova2.webp";
 import Link from "next/link";
 import Tabs from "./tabs";
 import Works from "./works";
+import Footer from "./footer";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -96,6 +97,7 @@ export default function Home() {
         </section>
         <Tabs />
         <Works />
+        <Footer />
       </main>
     </div>
   );
