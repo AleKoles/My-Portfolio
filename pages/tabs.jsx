@@ -4,13 +4,13 @@ import {
   SiCss3,
   SiGreensock,
   SiReact,
-  SiNextdotjs,
   SiTailwindcss,
+  SiAlpinedotjs,
   SiFigma,
   SiJavascript,
 } from "react-icons/si";
 import { BsBootstrap } from "react-icons/bs";
-import { DiPhotoshop, DiSass } from "react-icons/di";
+import { DiPhotoshop, DiSass, DiIllustrator } from "react-icons/di";
 
 const Tabs = () => {
   const [openTab, setOpenTab] = React.useState(1);
@@ -103,8 +103,8 @@ const Tabs = () => {
                       <p>React</p>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
-                      <SiNextdotjs className="text-4xl mx-auto" />
-                      <p>Next.js</p>
+                      <SiAlpinedotjs className="text-4xl mx-auto" />
+                      <p>Alpine.js</p>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiGreensock className="text-4xl mx-auto" />
@@ -121,6 +121,10 @@ const Tabs = () => {
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <DiPhotoshop className="text-4xl mx-auto" />
                       <p>Photoshop</p>
+                    </div>
+                    <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
+                      <DiIllustrator className="text-4xl mx-auto" />
+                      <p>Illustrator</p>
                     </div>
                   </div>
                 </div>
