@@ -39,14 +39,14 @@ export default function Home() {
                   onClick={() => setDarkMode(!darkMode)}
                 />
               </li>
-{/*               <li>
+             <li>
                 <Link
                   className="box-border px-2 py-1 border-2 rounded border-fuchsia-700 dark:border-amber-400 text-white dark:text-gray-500 bg-fuchsia-700 dark:bg-amber-400 hover:text-fuchsia-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-gray-500"
-                  href="https://drive.google.com/uc?export=download&id=1N-lT2dvwOySOe1g8QrizykLMCebefL0Y"
+                  href="https://drive.google.com/uc?export=download&id=17-lQ9rvbonVJ_JA_0_I3QiIfhcItFgMK"
                 >
                   Resume
                 </Link>
-              </li> */}
+              </li> 
             </ul>
           </nav>
         </section>

@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineHtml5, AiFillGithub } from "react-icons/ai";
+import { AiOutlineHtml5 } from "react-icons/ai";
 import {
   SiCss3,
   SiGreensock,
@@ -9,6 +9,7 @@ import {
   SiFigma,
   SiJavascript,
 } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa";
 import { BsBootstrap } from "react-icons/bs";
 import { DiPhotoshop, DiSass, DiIllustrator } from "react-icons/di";
 
@@ -111,8 +112,8 @@ const Tabs = () => {
                       <p>GSAP</p>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
-                      <AiFillGithub className="text-4xl mx-auto" />
-                      <p>GitHub</p>
+                      <FaGitAlt className="text-4xl mx-auto" />
+                      <p>Git</p>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiFigma className="text-4xl mx-auto" />
