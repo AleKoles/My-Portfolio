@@ -50,7 +50,7 @@ export default function Home() {
       {/* Canonical URL */}
       <link rel="canonical" href="https://kolesnikova-portfolio.netlify.app/" />
     </Head>
-      <main className="px-8 pb-16 md:px-16 lg:px-40 dark:bg-gray-500">
+      <main className="px-8 pb-16 md:px-16 lg:px-40 dark:bg-slate-600">
         <section>
           <nav className="py-8 md:px-2 flex justify-between">
             <h1 className="font-bold uppercase text-lg tracking-wide dark:text-white">
@@ -69,7 +69,7 @@ export default function Home() {
               </li>
              <li>
                 <Link
-                  className="box-border px-2 py-1 border-2 rounded border-fuchsia-700 dark:border-amber-400 text-white dark:text-gray-500 bg-fuchsia-700 dark:bg-amber-400 hover:text-fuchsia-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-gray-500"
+                  className="box-border px-2 py-1 border-2 rounded border-fuchsia-700 dark:border-amber-400 text-white dark:text-slate-600 bg-fuchsia-700 dark:bg-amber-400 hover:text-fuchsia-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-slate-600"
                   href="https://drive.google.com/uc?export=download&id=17-lQ9rvbonVJ_JA_0_I3QiIfhcItFgMK"
                 >
                   Resume
