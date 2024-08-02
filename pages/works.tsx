@@ -1,6 +1,6 @@
 import Image from "next/image";
 import weather from "../public/weather.webp";
-import dictionary from "../public/dictionary.webp";
+import accountant from "../public/stellasavoy.webp";
 import animator from "../public/animator-portfolio.webp";
 import gem from "../public/SpiritStone.webp";
 
@@ -84,30 +84,28 @@ const Works = () => {
         <div className="card rounded relative group shadow-lg overflow-hidden">
           <Image
             className="object-cover"
-            src={dictionary}
-            alt="DictionaryApp Image"
+            src={accountant}
+            alt="Accountant Landing Page"
           />
           <div className="absolute transform lg:translate-y-3/4 group-hover:translate-y-0 transition-all duration-300 bottom-0 left-0 w-full flex flex-col gap-4 px-4 py-4 bg-white bg-opacity-80 sm:bg-opacity-90 dark:bg-gray-700 dark:bg-opacity-80">
             <span className="lg:group-hover:mb-0 text-gl md:text-2xl font-semibold group-hover:pb-0 transition-all duration-300 dark:text-white">
-              Dictionary App
+              Personal Website for an Accountant
             </span>
             <span className="hidden sm:block lg:opacity-0 group-hover:opacity-100 transition-all duration-300 text-gray-600 leading-6 lg:leading-8 dark:text-white">
-              A thesaurus with word definition, examples, and illustrations.
-              Made with React, Bootstrap, Sass, Google Dictionary API, and
-              Pexels API.
+              A personal website made with React, Tailwind CSS, and Chart.js.
               <br /> Find the source code on my{" "}
               <a
                 className="text-fuchsia-600 dark:text-amber-400"
                 target="_blank"
                 rel="noreferrer"
-                href="https://github.com/AleKoles/react-dictionary-app"
+                href="https://github.com/AleKoles/stella-savoy"
               >
                 GitHub
               </a>
               .
             </span>
             <a
-              href="https://alekole-dictionary.netlify.app/"
+              href="https://stellasavoy.com/"
               target="_blank"
               rel="noreferrer"
               className="md:mb-2 box-border font-bold w-fit px-2 py-1 border-2 rounded border-fuchsia-700 dark:border-amber-400 text-white dark:text-gray-500 bg-fuchsia-700 dark:bg-amber-400 hover:text-fuchsia-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-opacity-0"
@@ -124,10 +122,10 @@ const Works = () => {
           />
           <div className="absolute transform lg:translate-y-3/4 group-hover:translate-y-0 transition-all duration-300 bottom-0 left-0 w-full flex flex-col gap-4 px-4 py-4 bg-white bg-opacity-80 sm:bg-opacity-90 dark:bg-gray-700 dark:bg-opacity-80">
             <span className="lg:group-hover:mb-0 text-gl md:text-2xl font-semibold group-hover:pb-0 transition-all duration-300 dark:text-white">
-              Small Business Webpage
+              Gem-cutting Business Landing Page
             </span>
             <span className="hidden sm:block lg:opacity-0 group-hover:opacity-100 transition-all duration-300 text-gray-600 leading-6 lg:leading-8 dark:text-white">
-              A business webpage for a small gem-cutting business in Ukraine. Made with React, Tailwind CSS, and GSAP.
+              A webpage for a Ukrainian family business. Made with React, Tailwind CSS, and GSAP.
               <br /> Find the source code on my{" "}
               <a
                 className="text-fuchsia-600 dark:text-amber-400"

@@ -63,21 +63,21 @@ export default function Home() {
             <a
               href="https://www.linkedin.com/in/oleksandra-kolesnikova/"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
             >
               <AiFillLinkedin className="hover:scale-110 hover:text-black dark:hover:text-white" />
             </a>
             <a
               href="https://github.com/AleKoles"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
             >
               <AiFillGithub className="hover:scale-110 hover:text-black dark:hover:text-white" />
             </a>
             <a
               href="mailto:kolesnikova.alexandra@gmail.com"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
             >
               <AiOutlineMail className="hover:scale-110 hover:text-black dark:hover:text-white" />
             </a>

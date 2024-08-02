@@ -15,18 +15,19 @@ import { DiPhotoshop, DiSass, DiIllustrator } from "react-icons/di";
 
 const Tabs = () => {
   const [openTab, setOpenTab] = React.useState(1);
+
   return (
     <>
       <div className="flex flex-wrap">
         <div className="w-full">
           <ul
             className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
-            role="tab"
+            role="tablist"
           >
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
-                  "font-semibold text-2xl md:text-3xl px-5 py-3  block leading-normal " +
+                  "font-semibold text-2xl md:text-3xl px-5 py-3 block leading-normal " +
                   (openTab === 1
                     ? "text-black border-b-4 border-fuchsia-700 dark:border-amber-400 dark:text-white"
                     : "text-gray-600 dark:text-gray-200")
@@ -37,7 +38,9 @@ const Tabs = () => {
                 }}
                 data-toggle="tab"
                 href="#link1"
-                role="tablist"
+                role="tab"
+                aria-controls="link1"
+                aria-selected={openTab === 1}
               >
                 What I Do
               </a>
@@ -56,7 +59,9 @@ const Tabs = () => {
                 }}
                 data-toggle="tab"
                 href="#link2"
-                role="tablist"
+                role="tab"
+                aria-controls="link2"
+                aria-selected={openTab === 2}
               >
                 My Toolbox
               </a>
@@ -65,7 +70,12 @@ const Tabs = () => {
           <div className="relative flex flex-col min-w-0 break-words w-full mb-6">
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
-                <div className={openTab === 1 ? "block" : "hidden"} id="link1">
+                <div
+                  className={openTab === 1 ? "block" : "hidden"}
+                  id="link1"
+                  role="tabpanel"
+                  aria-labelledby="link1"
+                >
                   <p className="py-5 text-md lg:text-lg text-gray-600 dark:text-white leading-8">
                     I am a frontend developer passionate about web content
                     creation and delivering outstanding user experience. I
@@ -73,7 +83,12 @@ const Tabs = () => {
                     readability with responsive design, and fun animations.
                   </p>
                 </div>
-                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
+                <div
+                  className={openTab === 2 ? "block" : "hidden"}
+                  id="link2"
+                  role="tabpanel"
+                  aria-labelledby="link2"
+                >
                   <div className="flex justify-between align-middle flex-wrap gap-4 py-5">
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <AiOutlineHtml5 className="text-4xl mx-auto" />
@@ -139,3 +154,4 @@ const Tabs = () => {
 };
 
 export default Tabs;
+
