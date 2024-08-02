@@ -39,8 +39,7 @@ const Tabs = () => {
                 data-toggle="tab"
                 href="#link1"
                 role="tab"
-                aria-controls="link1"
-                aria-selected={openTab === 1}
+            
               >
                 <h3>About me</h3>
               </a>
@@ -60,8 +59,7 @@ const Tabs = () => {
                 data-toggle="tab"
                 href="#link2"
                 role="tab"
-                aria-controls="link2"
-                aria-selected={openTab === 2}
+           
               >
                 <h3>My Toolbox</h3>
               </a>
@@ -74,7 +72,7 @@ const Tabs = () => {
                   className={openTab === 1 ? "block" : "hidden"}
                   id="link1"
                   role="tabpanel"
-                  aria-labelledby="link1"
+              
                 >
                   <p className="py-5 text-md lg:text-xl text-gray-600 dark:text-white leading-8">
                     I am a frontend developer passionate about web content
@@ -87,7 +85,7 @@ const Tabs = () => {
                   className={openTab === 2 ? "block" : "hidden"}
                   id="link2"
                   role="tabpanel"
-                  aria-labelledby="link2"
+                 
                 >
                   <div className="flex justify-center xl:justify-between align-middle flex-wrap gap-8 py-5">
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">

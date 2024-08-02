@@ -29,7 +29,6 @@ const ScrollUp = () => {
     <div
       className={`fixed bottom-10 right-10 p-3 text-gray-600 dark:text-amber-400 rounded-full cursor-pointer transition-opacity duration-300 ${visible ? 'opacity-100' : 'opacity-0'}`}
       onClick={scrollToTop}
-      aria-label="Scroll to top"
     >
       <IoIosArrowUp className="text-2xl" />
     </div>
