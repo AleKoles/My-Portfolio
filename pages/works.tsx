@@ -9,36 +9,35 @@ const Works = () => {
     <section>
       <div className="text-center">
         <h3 className="font-semibold text-2xl md:text-3xl py-2 dark:text-white">
-          Have a Look at my Works
+          My Projects
         </h3>
       </div>
       <div className="flex flex-col md:grid grid-cols-2 gap-8 justify-around pt-8">
-        <div className="card rounded relative group shadow-lg overflow-hidden">
+      <div className="card rounded relative group shadow-lg overflow-hidden">
           <Image
             className="object-cover"
-            src={weather}
-            alt="WeatherApp Image"
+            src={accountant}
+            alt="Accountant Landing Page"
           />
           <div className="absolute transform lg:translate-y-3/4 group-hover:translate-y-0 transition-all duration-300 bottom-0 left-0 w-full flex flex-col gap-4 px-4 py-4 bg-white bg-opacity-80 sm:bg-opacity-90 dark:bg-gray-700 dark:bg-opacity-80">
-            <span className="lg:group-hover:mb-0 text-lg md:text-2xl font-semibold group-hover:pb-0 transition-all duration-300 dark:text-white">
-              Weather App
+            <span className="lg:group-hover:mb-0 text-gl md:text-2xl font-semibold group-hover:pb-0 transition-all duration-300 dark:text-white">
+              Personal Website for an Accountant
             </span>
-            <span className="hidden sm:block lg:opacity-0 group-hover:opacity-100 transition-all duration-300 text-gray-600 dark:text-white leading-6 lg:leading-8">
-              An app made with Sass, Bootstrap, React.js, Axios, and OpenWeather
-              API. Shows current weather and a five-day forecast.
-              <br /> This app also has a{" "}
+            <span className="hidden sm:block lg:opacity-0 group-hover:opacity-100 transition-all duration-300 text-gray-600 leading-6 lg:leading-8 dark:text-white">
+              A personal website made with React, Tailwind CSS, and Chart.js.
+              <br /> Find the source code on my{" "}
               <a
-                href="https://alekole-weather.netlify.app/"
+                className="text-fuchsia-600 dark:text-amber-400"
                 target="_blank"
                 rel="noreferrer"
-                className="text-fuchsia-600 dark:text-amber-400"
+                href="https://github.com/AleKoles/stella-savoy"
               >
-                Vanilla JS version
-              </a>{" "}
+                GitHub
+              </a>
               .
             </span>
             <a
-              href="https://alekole-weather-react.netlify.app/"
+              href="https://stellasavoy.com/"
               target="_blank"
               rel="noreferrer"
               className="md:mb-2 box-border font-bold w-fit px-2 py-1 border-2 rounded border-fuchsia-700 dark:border-amber-400 text-white dark:text-gray-500 bg-fuchsia-700 dark:bg-amber-400 hover:text-fuchsia-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-opacity-0"
@@ -84,28 +83,29 @@ const Works = () => {
         <div className="card rounded relative group shadow-lg overflow-hidden">
           <Image
             className="object-cover"
-            src={accountant}
-            alt="Accountant Landing Page"
+            src={weather}
+            alt="WeatherApp Image"
           />
           <div className="absolute transform lg:translate-y-3/4 group-hover:translate-y-0 transition-all duration-300 bottom-0 left-0 w-full flex flex-col gap-4 px-4 py-4 bg-white bg-opacity-80 sm:bg-opacity-90 dark:bg-gray-700 dark:bg-opacity-80">
-            <span className="lg:group-hover:mb-0 text-gl md:text-2xl font-semibold group-hover:pb-0 transition-all duration-300 dark:text-white">
-              Personal Website for an Accountant
+            <span className="lg:group-hover:mb-0 text-lg md:text-2xl font-semibold group-hover:pb-0 transition-all duration-300 dark:text-white">
+              Weather App
             </span>
-            <span className="hidden sm:block lg:opacity-0 group-hover:opacity-100 transition-all duration-300 text-gray-600 leading-6 lg:leading-8 dark:text-white">
-              A personal website made with React, Tailwind CSS, and Chart.js.
-              <br /> Find the source code on my{" "}
+            <span className="hidden sm:block lg:opacity-0 group-hover:opacity-100 transition-all duration-300 text-gray-600 dark:text-white leading-6 lg:leading-8">
+              An app made with Sass, Bootstrap, React.js, Axios, and OpenWeather
+              API. Shows current weather and a five-day forecast.
+              <br /> This app also has a{" "}
               <a
-                className="text-fuchsia-600 dark:text-amber-400"
+                href="https://alekole-weather.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
-                href="https://github.com/AleKoles/stella-savoy"
+                className="text-fuchsia-600 dark:text-amber-400"
               >
-                GitHub
-              </a>
+                Vanilla JS version
+              </a>{" "}
               .
             </span>
             <a
-              href="https://stellasavoy.com/"
+              href="https://alekole-weather-react.netlify.app/"
               target="_blank"
               rel="noreferrer"
               className="md:mb-2 box-border font-bold w-fit px-2 py-1 border-2 rounded border-fuchsia-700 dark:border-amber-400 text-white dark:text-gray-500 bg-fuchsia-700 dark:bg-amber-400 hover:text-fuchsia-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-opacity-0"

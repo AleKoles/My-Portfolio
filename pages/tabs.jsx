@@ -42,7 +42,7 @@ const Tabs = () => {
                 aria-controls="link1"
                 aria-selected={openTab === 1}
               >
-                What I Do
+                <h3>About me</h3>
               </a>
             </li>
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
@@ -63,7 +63,7 @@ const Tabs = () => {
                 aria-controls="link2"
                 aria-selected={openTab === 2}
               >
-                My Toolbox
+                <h3>My Toolbox</h3>
               </a>
             </li>
           </ul>
@@ -76,7 +76,7 @@ const Tabs = () => {
                   role="tabpanel"
                   aria-labelledby="link1"
                 >
-                  <p className="py-5 text-md lg:text-lg text-gray-600 dark:text-white leading-8">
+                  <p className="py-5 text-md lg:text-xl text-gray-600 dark:text-white leading-8">
                     I am a frontend developer passionate about web content
                     creation and delivering outstanding user experience. I
                     develop SEO friendly websites optimized for speed and
@@ -89,58 +89,58 @@ const Tabs = () => {
                   role="tabpanel"
                   aria-labelledby="link2"
                 >
-                  <div className="flex justify-between align-middle flex-wrap gap-4 py-5">
+                  <div className="flex justify-center xl:justify-between align-middle flex-wrap gap-8 py-5">
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <AiOutlineHtml5 className="text-4xl mx-auto" />
-                      <p>HTML5</p>
+                      <h4>HTML5</h4>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiCss3 className="text-4xl mx-auto" />
-                      <p>CSS</p>
+                      <h4>CSS</h4>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <DiSass className="text-4xl mx-auto" />
-                      <p>Sass</p>
+                      <h4>Sass</h4>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <BsBootstrap className="text-4xl mx-auto" />
-                      <p>Bootstrap</p>
+                      <h4>Bootstrap</h4>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiTailwindcss className="text-4xl mx-auto" />
-                      <p>Tailwind</p>
+                      <h4>Tailwind</h4>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiJavascript className="text-4xl mx-auto" />
-                      <p>JavaScript</p>
+                      <h4>JavaScript</h4>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiReact className="text-4xl mx-auto" />
-                      <p>React</p>
+                      <h4>React</h4>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiAlpinedotjs className="text-4xl mx-auto" />
-                      <p>Alpine.js</p>
+                      <h4>Alpine.js</h4>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiGreensock className="text-4xl mx-auto" />
-                      <p>GSAP</p>
+                      <h4>GSAP</h4>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <FaGitAlt className="text-4xl mx-auto" />
-                      <p>Git</p>
+                      <h4>Git</h4>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <SiFigma className="text-4xl mx-auto" />
-                      <p>Figma</p>
+                      <h4>Figma</h4>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <DiPhotoshop className="text-4xl mx-auto" />
-                      <p>Photoshop</p>
+                      <h4>Photoshop</h4>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
                       <DiIllustrator className="text-4xl mx-auto" />
-                      <p>Illustrator</p>
+                      <h4>Illustrator</h4>
                     </div>
                   </div>
                 </div>
