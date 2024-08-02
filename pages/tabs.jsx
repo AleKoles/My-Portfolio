@@ -20,11 +20,10 @@ const Tabs = () => {
     <>
       <div className="flex flex-wrap">
         <div className="w-full">
-          <ul
+          <div
             className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
-            role="tablist"
           >
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <div className="-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
                   "font-semibold text-2xl md:text-3xl px-5 py-3 block leading-normal " +
@@ -38,13 +37,11 @@ const Tabs = () => {
                 }}
                 data-toggle="tab"
                 href="#link1"
-                role="tab"
-            
               >
                 <h3>About me</h3>
               </a>
-            </li>
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            </div>
+            <div className="-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
                   "font-semibold text-2xl md:text-3xl px-5 py-3 block leading-normal " +
@@ -58,21 +55,17 @@ const Tabs = () => {
                 }}
                 data-toggle="tab"
                 href="#link2"
-                role="tab"
-           
               >
                 <h3>My Toolbox</h3>
               </a>
-            </li>
-          </ul>
+            </div>
+          </div>
           <div className="relative flex flex-col min-w-0 break-words w-full mb-6">
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
                 <div
                   className={openTab === 1 ? "block" : "hidden"}
-                  id="link1"
-                  role="tabpanel"
-              
+                  id="link1"            
                 >
                   <p className="py-5 text-md lg:text-xl text-gray-600 dark:text-white leading-8">
                     I am a frontend developer passionate about web content
@@ -83,9 +76,7 @@ const Tabs = () => {
                 </div>
                 <div
                   className={openTab === 2 ? "block" : "hidden"}
-                  id="link2"
-                  role="tabpanel"
-                 
+                  id="link2"                
                 >
                   <div className="flex justify-center xl:justify-between align-middle flex-wrap gap-8 py-5">
                     <div className="flex flex-col justify-center text-gray-600 hover:scale-110 hover:text-black dark:text-gray-200 dark:hover:text-white">
