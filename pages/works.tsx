@@ -1,5 +1,5 @@
 import Image from "next/image";
-import weather from "../public/weather (1).webp";
+import weather from "../public/weather.webp";
 import bee from "../public/beefybee.webp";
 
 const Works = () => {
