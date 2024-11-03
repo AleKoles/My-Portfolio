@@ -2,7 +2,7 @@ import { FiGithub } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="mt-20 flex flex-col justify-center items-center">
+    <footer className="mx-auto max-w-7xl mt-20 flex flex-col justify-center items-center">
       <a
         href="https://github.com/AleKoles/My-Portfolio"
         target="_blank"

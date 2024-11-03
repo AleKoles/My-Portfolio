@@ -18,7 +18,7 @@ const Tabs = () => {
 
   return (
     <>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap mx-auto max-w-7xl">
         <div className="w-full">
           <div
             className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
@@ -28,7 +28,7 @@ const Tabs = () => {
                 className={
                   "font-semibold text-2xl md:text-3xl px-5 py-3 block leading-normal " +
                   (openTab === 1
-                    ? "text-black border-b-4 border-fuchsia-700 dark:border-amber-400 dark:text-white"
+                    ? "text-black border-b-4 border-sky-700 dark:border-amber-400 dark:text-white"
                     : "text-gray-600 dark:text-gray-200")
                 }
                 onClick={(e) => {
@@ -46,7 +46,7 @@ const Tabs = () => {
                 className={
                   "font-semibold text-2xl md:text-3xl px-5 py-3 block leading-normal " +
                   (openTab === 2
-                    ? "text-black border-b-4 border-fuchsia-700 dark:border-amber-400 dark:text-white"
+                    ? "text-black border-b-4 border-sky-700 dark:border-amber-400 dark:text-white"
                     : "text-gray-600 dark:text-gray-200")
                 }
                 onClick={(e) => {

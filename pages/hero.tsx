@@ -1,13 +1,13 @@
 import { AiOutlineMail, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import Image from "next/image";
-import avatar from "../public/Kolesnikova.webp";
+import avatar from "../public/Kolesnikova1.webp";
 import avatarDark from "../public/Kolesnikova2.webp";
 
 const Hero = () => {
     return (
-        <section className="h-fit mt-4">
+        <section className="h-fit mt-4 mx-auto max-w-7xl">
         <div className="text-center p-6">
-          <h2 className="font-bold text-4xl md:text-5xl text-fuchsia-700 tracking-wide py-2 dark:text-white">
+          <h2 className="font-bold text-4xl md:text-5xl text-sky-700 tracking-wide py-2 dark:text-white">
             Oleksandra Kolesnikova
           </h2>
           <h3 className="font-semibold text-2xl md:text-3xl py-2  dark:text-amber-400">
@@ -37,7 +37,7 @@ const Hero = () => {
             <AiOutlineMail className="hover:scale-110 hover:text-black dark:hover:text-white" />
           </a>
         </div>
-        <div className="relative rounded-full w-72 h-72 mx-auto mt-10 mb-12 overflow-hidden border-2 dark:border-white">
+        <div className="relative rounded-full w-80 h-80 mx-auto mt-10 mb-12 overflow-hidden border-2 dark:border-white">
           <Image
             src={avatar}
             className="dark:hidden"

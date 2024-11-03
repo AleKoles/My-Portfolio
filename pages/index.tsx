@@ -17,7 +17,7 @@ export default function Home() {
       <title>Oleksandra Kolesnikova | Frontend Developer Portfolio</title>
       <meta
         name="description"
-        content="Web frontend developer's portfolio showcasing expertise in HTML, CSS, JavaScript, React, and more. Explore my projects, skills, and contact information."
+        content="Web frontend developer's portfolio showcasing expertise in HTML, CSS, JavaScript, React, Alpine.js, GSAP, and more. Explore my projects, skills, and contact information."
       />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="shortcut icon" href="/favicon.svg" />
@@ -50,9 +50,9 @@ export default function Home() {
       {/* Canonical URL */}
       <link rel="canonical" href="https://kolesnikova-portfolio.netlify.app/" />
     </Head>
-      <main className="px-8 pb-16 md:px-16 lg:px-40 dark:bg-slate-600">
+      <main className="px-4 pb-16  bg-[#fff8e5] dark:bg-slate-600">
         <section>
-          <nav className="py-8 md:px-2 flex justify-between">
+          <nav className="py-8 mx-auto max-w-7xl flex justify-between">
             <h1 className="font-bold uppercase text-lg tracking-wide dark:text-white">
               <span className="hidden sm:inline">Developer</span> Portfolio
             </h1>
@@ -69,8 +69,8 @@ export default function Home() {
               </li>
              <li>
                 <Link
-                  className="box-border px-2 py-1 border-2 rounded border-fuchsia-700 dark:border-amber-400 text-white dark:text-slate-600 bg-fuchsia-700 dark:bg-amber-400 hover:text-fuchsia-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-slate-600"
-                  href="https://drive.google.com/uc?export=download&id=17-lQ9rvbonVJ_JA_0_I3QiIfhcItFgMK"
+                  className="box-border px-3 py-1 border-2 duration-150 ease-in-out rounded border-sky-700 dark:border-amber-400 text-white dark:text-slate-600 bg-sky-700 dark:bg-amber-400 hover:text-sky-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-slate-600"
+                  href="https://drive.google.com/uc?export=download&id=1zhXTp-PKEG0kUTJfpD4CkqZJZV7XXrxx"
                 >
                   Resume
                 </Link>
