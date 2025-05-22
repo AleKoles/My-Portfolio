@@ -70,7 +70,7 @@ const Tabs = () => {
                   <p className="py-5 text-md lg:text-xl text-gray-600 dark:text-white leading-8">
                     I am a frontend developer passionate about web content
                     creation and delivering outstanding user experience. I
-                    develop SEO friendly websites optimized for speed and
+                    develop UI for SEO-friendly websites optimized for speed and
                     readability with responsive design, and fun animations.
                   </p>
                 </div>
