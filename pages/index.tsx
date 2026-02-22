@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { TbTie } from "react-icons/tb";
 import { SlMagicWand } from "react-icons/sl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Tabs from "./tabs";
 import Works from "./works";
@@ -10,7 +10,21 @@ import ScrollUp from "./scrollup";
 import Hero from "./hero";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+
+  // Load saved theme on first mount
+  useEffect(() => {
+    const saved = localStorage.getItem("theme"); // "dark" | "light" | null
+    if (saved === "light") setDarkMode(false);
+    if (saved === "dark") setDarkMode(true);
+    // if null -> default stays dark
+  }, []);
+
+  // Save theme whenever it changes
+  useEffect(() => {
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+  }, [darkMode]);
+
   return (
     <div className={darkMode ? "dark" : ""}>
        <Head>
@@ -57,7 +71,7 @@ export default function Home() {
               <span className="hidden sm:inline">Developer</span> Portfolio
             </h1>
             <ul className="flex justify content-between gap-8 font-semibold">
-              <li className="mt-1 cursor-pointer">
+              <li className="mt-1 hover:scale-110 ease-in-out duration-150 cursor-pointer">
                 <TbTie
                   className="text-2xl dark:hidden"
                   onClick={() => setDarkMode(!darkMode)}
@@ -70,7 +84,7 @@ export default function Home() {
              <li>
                 <Link
                   className="box-border px-3 py-1 border-2 duration-150 ease-in-out rounded border-sky-700 dark:border-amber-400 text-white dark:text-slate-600 bg-sky-700 dark:bg-amber-400 hover:text-sky-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-slate-600"
-                  href="https://drive.google.com/uc?export=download&id=1zhXTp-PKEG0kUTJfpD4CkqZJZV7XXrxx"
+                  href="https://drive.google.com/uc?export=download&id=1XNufLL0Old46JWy2l5liltZk6fRqQizT"
                 >
                   Resume
                 </Link>

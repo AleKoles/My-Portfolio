@@ -2,58 +2,109 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap'); 
 
-:root {
+:root{
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Core */
+  --foreground-rgb: 17, 24, 39; /* slightly off-black for better readability */
+  --muted-rgb: 99, 102, 106;    /* for secondary text */
+  --bg-1-rgb: 249, 250, 251;    /* page background (very light) */
+  --bg-2-rgb: 241, 243, 245;    /* subtle surface */
+  --bg-3-rgb: 232, 235, 237;    /* card background */
+
+  /* Primary accent (cool cyan/blue) */
+  --primary-500: 0, 114, 255;   /* vivid brand blue */
+  --primary-400: 54, 169, 255;  /* lighter */
+  --primary-600: 0, 90, 200;    /* darker for hover */
+
+  /* Accent warm (for call-to-action) */
+  --accent-500: 255, 179, 64;   /* warm amber/orange */
+
+  /* Glows */
+  --primary-glow: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(22,171,255,0.2) 0deg,
+    rgba(8,133,255,0.15) 55deg,
+    rgba(84,214,255,0.12) 120deg,
+    rgba(0,113,255,0.12) 160deg,
+    transparent 360deg
+  );
+
+  /* Borders / subtle strokes */
+  --stroke-rgb: 215, 219, 221;
+
+  /* Text emphasis / card */
+  --card-rgb: 255, 255, 255;
+  --card-border-rgb: 226, 229, 231;
+}
+
+/* Dark theme: toggled by adding data-theme="dark" to <html> or <body> */
+:root[data-theme="dark"]{
+  --foreground-rgb: 240, 245, 250; /* near-white text */
+  --muted-rgb: 173, 181, 189;
+  --bg-1-rgb: 10, 12, 18;  /* darkest page bg */
+  --bg-2-rgb: 18, 22, 29;  /* surface */
+  --bg-3-rgb: 30, 36, 45;  /* card bg */
+
+  --primary-500: 54, 169, 255;  /* slightly lighter cyan on dark */
+  --primary-400: 120, 200, 255;
+  --primary-600: 11, 102, 210;
+
+  --accent-500: 255, 188, 82;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
+    rgba(54,169,255,0.15) 0deg,
+    rgba(0,114,255,0.12) 55deg,
+    rgba(84,214,255,0.08) 120deg,
+    rgba(11,102,210,0.08) 160deg,
     transparent 360deg
   );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
 
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
+  --stroke-rgb: 55, 64, 74;
 
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+  --card-rgb: 16, 20, 26;
+  --card-border-rgb: 47, 56, 68;
+}
+
+/* Helpers: use the variables */
+body{
+  background: linear-gradient(180deg, rgb(var(--bg-1-rgb)), rgb(var(--bg-2-rgb)));
+  color: rgb(var(--foreground-rgb));
+  font-family: "Poppins", sans-serif;
+}
+
+.card{
+  background: rgb(var(--card-rgb));
+  border: 1px solid rgba(var(--card-border-rgb), 0.6);
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* Accent button example */
+.btn-primary{
+  background: linear-gradient(90deg, rgb(var(--primary-500)), rgb(var(--primary-400)));
+  color: white;
+  border-radius: 10px;
+}
+.btn-primary:hover{
+  background: rgb(var(--primary-600));
+  transform: translateY(-1px);
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 }
-h1 {
-  font-family: monospace;
+body {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
-@font-face {
-  font-family: "Poppins", sans-serif;
-  src: url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=PT+Sans+Narrow&display=swap);
+h1, .mono {
+  font-family: "JetBrains Mono", monospace;
 }
