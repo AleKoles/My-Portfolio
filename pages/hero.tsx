@@ -11,7 +11,7 @@ const Hero = () => {
             Oleksandra Kolesnikova
           </h2>
           <h3 className="font-semibold text-2xl md:text-3xl py-2  dark:text-amber-400">
-            Frontend Developer and Web Content Designer
+          Frontend Design Engineer
           </h3>
         </div>
         <div className="text-4xl text-gray-600 dark:text-gray-200 flex justify-center gap-16 py-3">
