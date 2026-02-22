@@ -24,7 +24,7 @@ const Works = () => {
           />
           <div className="absolute transform lg:translate-y-3/4 group-hover:translate-y-0 transition-all duration-300 bottom-0 left-0 w-full flex flex-col gap-4 px-4 py-3 bg-[#fff8e5] bg-opacity-80 sm:bg-opacity-90 dark:bg-slate-600 dark:bg-opacity-80">
             <p className="lg:group-hover:mb-0 text-lg md:text-xl font-semibold group-hover:pb-0 transition-all duration-300 dark:text-white">
-              Author's Personal Website
+              Author&apos;s Personal Website
             </p>
             <p className="hidden sm:block lg:opacity-0 group-hover:opacity-100 transition-all duration-300 text-slate-600 dark:text-white leading-6 lg:leading-8">
               A React/Vite multipage website with EmailOctopus integration and Kindle Cover Guides Generator (creates and exports png with guides).
