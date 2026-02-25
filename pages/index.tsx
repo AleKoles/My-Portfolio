@@ -84,7 +84,7 @@ export default function Home() {
              <li>
                 <Link
                   className="box-border px-3 py-1 border-2 duration-150 ease-in-out rounded border-sky-700 dark:border-amber-400 text-white dark:text-slate-600 bg-sky-700 dark:bg-amber-400 hover:text-sky-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-slate-600"
-                  href="https://drive.google.com/uc?export=download&id=1XNufLL0Old46JWyhttps://drive.google.com/uc?export=download&id=1ittLzaJLI9VQQppKDMyN8n2TULIKaakB"
+                  href="https://drive.google.com/uc?export=download&id=1SkGGK9bP34dy6eAE-ZTnKZy4DyWcIAiE"
                 >
                   Resume
                 </Link>
