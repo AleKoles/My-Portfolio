@@ -8,8 +8,8 @@ import { BsBootstrap } from "react-icons/bs";
 import { DiPhotoshop, DiSass, DiIllustrator } from "react-icons/di";
 import { MdDevices, MdOutlineMap, MdOutlineAccountTree, MdOutlineSpaceDashboard } from "react-icons/md";
 import Image from "next/image";
-import avatar from "../public/Split.png";
-import avatarDark from "../public/Split.png";
+import avatar from "../public/SplitOK.png";
+import avatarDark from "../public/SplitOK.png";
 import { useRef, useEffect, useState } from "react";
 
 const DEV_SKILLS = [

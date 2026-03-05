@@ -66,7 +66,7 @@ useEffect(() => {
         <section>
           <nav className="py-8 mx-auto max-w-7xl flex justify-between">
             <h1 className="font-bold uppercase text-lg tracking-wide dark:text-white">
-              <span className="hidden sm:inline">Developer/UI</span> Portfolio
+              <span className="hidden sm:inline">Developer | UI/UX</span> Portfolio
             </h1>
             <ul className="flex justify content-between gap-8 font-semibold">
               <li className="mt-1 hover:scale-110 ease-in-out duration-150 cursor-pointer">
