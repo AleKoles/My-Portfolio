@@ -68,7 +68,7 @@ const Works = () => {
           href="https://alexandrajpeters.com/"
           description={
             <>
-              A React/Vite multipage website with EmailOctopus integration and a Kindle
+              A React.js multipage website with EmailOctopus integration and a Kindle
               Cover Guides Generator (exports PNG with guides).
             </>
           }

@@ -2,109 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-:root{
-  --max-width: 1100px;
+
+:root {
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  /* Core */
-  --foreground-rgb: 17, 24, 39; /* slightly off-black for better readability */
-  --muted-rgb: 99, 102, 106;    /* for secondary text */
-  --bg-1-rgb: 249, 250, 251;    /* page background (very light) */
-  --bg-2-rgb: 241, 243, 245;    /* subtle surface */
-  --bg-3-rgb: 232, 235, 237;    /* card background */
+  --foreground-rgb: 17, 24, 39;
+  --muted-rgb:      99, 102, 106;
 
-  /* Primary accent (cool cyan/blue) */
-  --primary-500: 0, 114, 255;   /* vivid brand blue */
-  --primary-400: 54, 169, 255;  /* lighter */
-  --primary-600: 0, 90, 200;    /* darker for hover */
+  --bg-1-rgb: 249, 250, 251;
+  --bg-2-rgb: 241, 243, 245;
+  --bg-3-rgb: 232, 235, 237;
 
-  /* Accent warm (for call-to-action) */
-  --accent-500: 255, 179, 64;   /* warm amber/orange */
+  --primary-400: 54, 169, 255;
+  --primary-500: 0, 114, 255;
+  --primary-600: 0, 90, 200;
 
-  /* Glows */
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    rgba(22,171,255,0.2) 0deg,
-    rgba(8,133,255,0.15) 55deg,
-    rgba(84,214,255,0.12) 120deg,
-    rgba(0,113,255,0.12) 160deg,
-    transparent 360deg
-  );
+  --accent-500: 255, 179, 64;
 
-  /* Borders / subtle strokes */
-  --stroke-rgb: 215, 219, 221;
-
-  /* Text emphasis / card */
-  --card-rgb: 255, 255, 255;
-  --card-border-rgb: 226, 229, 231;
+  --stroke-rgb:       215, 219, 221;
+  --card-rgb:         255, 255, 255;
+  --card-border-rgb:  226, 229, 231;
 }
 
-/* Dark theme: toggled by adding data-theme="dark" to <html> or <body> */
-:root[data-theme="dark"]{
-  --foreground-rgb: 240, 245, 250; /* near-white text */
-  --muted-rgb: 173, 181, 189;
-  --bg-1-rgb: 10, 12, 18;  /* darkest page bg */
-  --bg-2-rgb: 18, 22, 29;  /* surface */
-  --bg-3-rgb: 30, 36, 45;  /* card bg */
+.dark {
+  --foreground-rgb: 240, 245, 250;
+  --muted-rgb:      173, 181, 189;
 
-  --primary-500: 54, 169, 255;  /* slightly lighter cyan on dark */
+  --bg-1-rgb: 10, 12, 18;
+  --bg-2-rgb: 18, 22, 29;
+  --bg-3-rgb: 30, 36, 45;
+
   --primary-400: 120, 200, 255;
+  --primary-500: 54, 169, 255;
   --primary-600: 11, 102, 210;
 
   --accent-500: 255, 188, 82;
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    rgba(54,169,255,0.15) 0deg,
-    rgba(0,114,255,0.12) 55deg,
-    rgba(84,214,255,0.08) 120deg,
-    rgba(11,102,210,0.08) 160deg,
-    transparent 360deg
-  );
-
-  --stroke-rgb: 55, 64, 74;
-
-  --card-rgb: 16, 20, 26;
+  --stroke-rgb:      55, 64, 74;
+  --card-rgb:        16, 20, 26;
   --card-border-rgb: 47, 56, 68;
 }
 
-/* Helpers: use the variables */
-body{
-  background: linear-gradient(180deg, rgb(var(--bg-1-rgb)), rgb(var(--bg-2-rgb)));
-  color: rgb(var(--foreground-rgb));
-  font-family: "Poppins", sans-serif;
-}
-
-.card{
-  background: rgb(var(--card-rgb));
-  border: 1px solid rgba(var(--card-border-rgb), 0.6);
-  border-radius: var(--border-radius);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-}
-
-/* Accent button example */
-.btn-primary{
-  background: linear-gradient(90deg, rgb(var(--primary-500)), rgb(var(--primary-400)));
-  color: white;
-  border-radius: 10px;
-}
-.btn-primary:hover{
-  background: rgb(var(--primary-600));
-  transform: translateY(-1px);
-}
-
+/* ── Base ──────────────────────────────────────────────────────────────── */
 body {
+  color:       rgb(var(--foreground-rgb));
   font-family: "Inter", sans-serif;
-}
-body {
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+
+  background:
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(186, 230, 253, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 85%  10%, rgba(254, 240, 138, 0.35) 0%, transparent 55%),
+    linear-gradient(160deg, #f0f9ff 0%, #fff8e5 50%, #fef9ee 100%);
+}
+
+.dark body {
+  background:
+    radial-gradient(ellipse 70% 50% at 15%   0%, rgba(54,  169, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 90%   5%, rgba(255, 188,  82, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(11,  102, 210, 0.07) 0%, transparent 60%),
+    linear-gradient(160deg, #0a0c12 0%, #0d1117 50%, #0a0e16 100%);
 }
 
 h1, .mono {
   font-family: "JetBrains Mono", monospace;
+}
+
+.card {
+  background:    rgb(var(--card-rgb));
+  border:        1px solid rgba(var(--card-border-rgb), 0.6);
+  border-radius: var(--border-radius);
+  box-shadow:    0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary {
+  background:    linear-gradient(90deg, rgb(var(--primary-500)), rgb(var(--primary-400)));
+  color:         white;
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  background: rgb(var(--primary-600));
+  transform:  translateY(-1px);
 }

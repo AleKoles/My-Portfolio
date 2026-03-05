@@ -3,7 +3,7 @@ import { TbTie } from "react-icons/tb";
 import { SlMagicWand } from "react-icons/sl";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Tabs from "./tabs";
+
 import Works from "./works";
 import Footer from "./footer";
 import ScrollUp from "./scrollup";
@@ -12,15 +12,13 @@ import Hero from "./hero";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
 
-  // Load saved theme on first mount
-  useEffect(() => {
-    const saved = localStorage.getItem("theme"); // "dark" | "light" | null
-    if (saved === "light") setDarkMode(false);
-    if (saved === "dark") setDarkMode(true);
-    // if null -> default stays dark
-  }, []);
 
-  // Save theme whenever it changes
+// Load saved theme on first mount
+useEffect(() => {
+  const saved = localStorage.getItem("theme");
+  if (saved === "light") setDarkMode(false);
+}, []);
+
   useEffect(() => {
     localStorage.setItem("theme", darkMode ? "dark" : "light");
   }, [darkMode]);
@@ -93,7 +91,6 @@ export default function Home() {
           </nav>
         </section>
         <Hero />
-        <Tabs />
         <Works />
         <Footer />
         <ScrollUp />
