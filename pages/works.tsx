@@ -51,16 +51,16 @@ const ProjectCard = ({ image, alt, title, description, href }: ProjectCardProps)
 
 const Works = () => {
   return (
-    <section className="mx-auto max-w-7xl">
+    <section className="mx-auto px-4  max-w-7xl">
       {/* Solo Projects */}
       <div className="text-center">
         <h3 className="font-semibold text-2xl md:text-3xl py-2 dark:text-white">
-          My Solo Projects
+          Projects
         </h3>
         <p className="dark:text-white/70 md:text-lg">From idea to deployment</p>
       </div>
 
-      <div className="flex flex-col lg:grid grid-cols-3 gap-8 justify-around pt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-around pt-8">
         <ProjectCard
           image={author}
           alt="Personal Author's Website"
@@ -117,27 +117,16 @@ const Works = () => {
             </>
           }
         />
-      </div>
-
-      {/* Team Projects */}
-      <div className="text-center mt-12">
-        <h3 className="font-semibold text-2xl md:text-3xl py-2 dark:text-white">
-          Team Projects
-        </h3>
-        <p className="dark:text-white/70 md:text-lg">
-          From wireframe and prototype to frontend implementation
-        </p>
-      </div>
-
-      <div className="flex flex-col lg:grid grid-cols-3 gap-8 justify-around pt-8">
-        <ProjectCard
+      <ProjectCard
           image={sart}
           alt="S-Art E-Commerce Website"
           title="S-Art E-Commerce Webpage"
           href="https://s-art.work/"
-          description={<>Implemented with MODX, Alpine.js, GSAP, and Tailwind.</>}
+          description={<>From wireframe and prototype to frontend implementation with MODX, Alpine.js, GSAP, and Tailwind.</>}
         />
+        
       </div>
+
     </section>
   );
 };

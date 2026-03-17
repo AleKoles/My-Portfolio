@@ -35,6 +35,88 @@ const DESIGN_SKILLS = [
   { label: "Design Systems", Icon: MdOutlineSpaceDashboard },
 ];
 
+// 11 rows — middle row (index 5) is fully opaque, fades toward edges
+const ROW_OPACITY = [0.08, 0.15, 0.25, 0.45, 0.7, 1, 0.7, 0.45, 0.25, 0.15, 0.08];
+
+function MarqueeRow({
+  labels,
+  direction,
+  rowIndex,
+  side,
+  speed = 28,
+}: {
+  labels: string[];
+  direction: "left" | "right";
+  rowIndex: number;
+  side: "left" | "right";
+  speed?: number;
+}) {
+  const repeated = [...labels, ...labels, ...labels, ...labels, ...labels, ...labels];
+  const opacity  = ROW_OPACITY[rowIndex];
+  const dur      = `${labels.length * speed}s`;
+  const animName = direction === "left" ? "marqueeLeft" : "marqueeRight";
+
+  // Fade on the inner side (toward badge ring), disappear behind screen edge
+  const mask =
+    side === "left"
+      ? "linear-gradient(to left,  transparent 0%, black 28%, black 100%)"
+      : "linear-gradient(to right, transparent 0%, black 28%, black 100%)";
+
+  return (
+    <div
+      className="relative overflow-hidden whitespace-nowrap w-full flex-1"
+      style={{
+        opacity,
+        WebkitMaskImage: mask,
+        maskImage: mask,
+      }}
+    >
+      <span
+        className="inline-block text-sm font-bold tracking-widest uppercase text-gray-500 dark:text-gray-400"
+        style={{
+          fontFamily: "'JetBrains Mono', monospace",
+          animation: `${animName} ${dur} linear infinite`,
+          willChange: "transform",
+        }}
+      >
+        {repeated.map((lbl, i) => (
+          <span key={i} className="mx-6">
+            {lbl}
+          </span>
+        ))}
+      </span>
+    </div>
+  );
+}
+
+function SkillMarquees({
+  labels,
+  baseDirection,
+}: {
+  labels: string[];
+  baseDirection: "left" | "right";
+}) {
+  const alt: "left" | "right" = baseDirection === "left" ? "right" : "left";
+  const rows: ("left" | "right")[] = [
+    baseDirection, alt, baseDirection, alt, baseDirection, alt,
+    baseDirection, alt, baseDirection, alt, baseDirection,
+  ];
+
+  return (
+    <div className="hidden lg:flex flex-col gap-2 justify-center self-stretch flex-1 min-w-0">
+      {rows.map((dir, i) => (
+        <MarqueeRow
+          key={i}
+          labels={labels}
+          direction={dir}
+          rowIndex={i}
+          side={baseDirection === "left" ? "left" : "right"}
+        />
+      ))}
+    </div>
+  );
+}
+
 function arcPositions(count: number, side: "left" | "right", rx: number, ry: number, spreadDeg = 156) {
   return Array.from({ length: count }, (_, i) => {
     const base  = side === "right" ? -spreadDeg / 2 : 180 - spreadDeg / 2;
@@ -114,8 +196,11 @@ const Hero = () => {
   const leftPos  = arcPositions(DESIGN_SKILLS.length, "left",  rx, ry);
   const rightPos = arcPositions(DEV_SKILLS.length,    "right", rx, ry);
 
+  const designLabels = DESIGN_SKILLS.map(s => s.label);
+  const devLabels    = DEV_SKILLS.map(s => s.label);
+
   return (
-    <section className="h-fit mt-4 mx-auto max-w-7xl pb-16">
+    <section className="h-fit mt-4 pb-16">
       <div className="text-center p-6">
         <h2 className="font-bold text-4xl md:text-5xl text-sky-700 tracking-wide py-2 dark:text-white">
           Oleksandra Kolesnikova
@@ -137,41 +222,41 @@ const Hero = () => {
         </a>
       </div>
 
-      <style>{`
-        @keyframes badgeFadeIn {
-          from { opacity: 0; transform: translateY(8px); }
-          to   { opacity: 1; transform: translateY(0);   }
-        }
-      `}</style>
 
-      <div
-        className="relative mx-auto mt-10 mb-12"
-        style={{ width: W, height: H, maxWidth: "100%" }}
-      >
+      {/* design marquee | badge ring | dev marquee */}
+      <div className="flex items-stretch gap-0 mt-10 mb-12">
+        <SkillMarquees labels={designLabels} baseDirection="left" />
+
         <div
-          className="absolute rounded-full overflow-hidden"
-          style={{
-            left: "50%", top: "50%",
-            transform: "translate(-50%, -50%)",
-            width: imgW, height: imgH,
-          }}
+          className="relative mx-auto flex-shrink-0"
+          style={{ width: W, height: H, maxWidth: "100%" }}
         >
-          <Image src={avatar}     className="dark:hidden"              alt="Oleksandra Kolesnikova" />
-          <Image src={avatarDark} className="hidden w-full dark:block" alt="Oleksandra Kolesnikova" />
+          <div
+            className="absolute rounded-full overflow-hidden"
+            style={{
+              left: "50%", top: "50%",
+              transform: "translate(-50%, -50%)",
+              width: imgW, height: imgH,
+            }}
+          >
+            <Image src={avatar}     className="dark:hidden"              alt="Oleksandra Kolesnikova" />
+            <Image src={avatarDark} className="hidden w-full dark:block" alt="Oleksandra Kolesnikova" />
+          </div>
+
+          {DESIGN_SKILLS.map((s, i) => (
+            <Badge key={s.label} {...s} x={leftPos[i].x}  y={leftPos[i].y}  delay={i * 100} iconSize={iconSize} />
+          ))}
+          {DEV_SKILLS.map((s, i) => (
+            <Badge key={s.label} {...s} x={rightPos[i].x} y={rightPos[i].y} delay={i * 100} iconSize={iconSize} />
+          ))}
         </div>
 
-
-        {DESIGN_SKILLS.map((s, i) => (
-          <Badge key={s.label} {...s} x={leftPos[i].x}  y={leftPos[i].y}  delay={i * 100} iconSize={iconSize} />
-        ))}
-        {DEV_SKILLS.map((s, i) => (
-          <Badge key={s.label} {...s} x={rightPos[i].x} y={rightPos[i].y} delay={i * 100} iconSize={iconSize} />
-        ))}
+        <SkillMarquees labels={devLabels} baseDirection="right" />
       </div>
 
-      <div className="max-w-4xl mx-auto text-lg lg:text-xl text-center text-gray-600 dark:text-white leading-8">
-          <p>Frontend Design Engineer operating at the intersection of design systems and frontend architecture. I transform high-fidelity concepts into accessible, scalable interfaces using React and modern CSS frameworks, ensuring seamless collaboration between design and engineering.</p>
-        </div>
+      <div className="max-w-4xl mx-auto text-lg lg:text-xl text-center text-gray-600 dark:text-white leading-8 px-4 ">
+        <p>Frontend Design Engineer operating at the intersection of design systems and frontend architecture. I transform high-fidelity concepts into accessible, scalable interfaces using React and modern CSS frameworks, ensuring seamless collaboration between design and engineering.</p>
+      </div>
     </section>
   );
 };

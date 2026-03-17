@@ -62,7 +62,7 @@ useEffect(() => {
       {/* Canonical URL */}
       <link rel="canonical" href="https://kolesnikova-portfolio.netlify.app/" />
     </Head>
-      <main className="px-4 pb-16  bg-[#fff8e5] dark:bg-slate-600">
+      <main className="pb-16  bg-[#fff8e5] dark:bg-slate-600">
         <section>
           <nav className="py-8 mx-auto max-w-7xl flex justify-between">
             <h1 className="font-bold uppercase text-lg tracking-wide dark:text-white">
@@ -82,7 +82,7 @@ useEffect(() => {
              <li>
                 <Link
                   className="box-border px-3 py-1 border-2 duration-150 ease-in-out rounded border-sky-700 dark:border-amber-400 text-white dark:text-slate-600 bg-sky-700 dark:bg-amber-400 hover:text-sky-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-slate-600"
-                  href="https://drive.google.com/uc?export=download&id=1Q30q5bJfSz6O-P4-rvLFGn6J4cP8KrLE"
+                  href="https://drive.google.com/uc?export=download&id=1jWJ2oyqJnea-LKG_17UgPjK-PYkHRmEV"
                 >
                   Resume
                 </Link>
