@@ -56,7 +56,7 @@ function MarqueeRow({
   const dur      = `${labels.length * speed}s`;
   const animName = direction === "left" ? "marqueeLeft" : "marqueeRight";
 
-  // Fade on the inner side (toward badge ring), disappear behind screen edge
+
   const mask =
     side === "left"
       ? "linear-gradient(to left,  transparent 0%, black 28%, black 100%)"

@@ -55,7 +55,7 @@ const Works = () => {
       {/* Solo Projects */}
       <div className="text-center">
         <h3 className="font-semibold text-2xl md:text-3xl py-2 dark:text-white">
-          Projects
+          Web Projects
         </h3>
         <p className="dark:text-white/70 md:text-lg">From idea to deployment</p>
       </div>
