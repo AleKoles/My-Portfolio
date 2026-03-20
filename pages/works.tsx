@@ -51,16 +51,16 @@ const ProjectCard = ({ image, alt, title, description, href }: ProjectCardProps)
 
 const Works = () => {
   return (
-    <section className="mx-auto px-4  max-w-7xl">
+    <section className="mx-auto max-w-7xl">
       {/* Solo Projects */}
-      <div className="text-center">
+      <div className="text-center pt-12 pb-8">
         <h3 className="font-semibold text-2xl md:text-3xl py-2 dark:text-white">
           Web Projects
         </h3>
-        <p className="dark:text-white/70 md:text-lg">From idea to deployment</p>
+        <p className="dark:text-white/70 text-slate-600 md:text-lg">From idea to deployment</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-around pt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-around">
         <ProjectCard
           image={author}
           alt="Personal Author's Website"

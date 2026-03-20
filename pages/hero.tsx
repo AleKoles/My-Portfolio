@@ -254,7 +254,7 @@ const Hero = () => {
         <SkillMarquees labels={devLabels} baseDirection="right" />
       </div>
 
-      <div className="max-w-4xl mx-auto text-lg lg:text-xl text-center text-gray-600 dark:text-white leading-8 px-4 ">
+      <div className="max-w-4xl mx-auto text-lg lg:text-xl text-center text-slate-700 dark:text-white leading-8 px-4 ">
         <p>Frontend Design Engineer operating at the intersection of design systems and frontend architecture. I transform high-fidelity concepts into accessible, scalable interfaces using React and modern CSS frameworks, ensuring seamless collaboration between design and engineering.</p>
       </div>
     </section>
