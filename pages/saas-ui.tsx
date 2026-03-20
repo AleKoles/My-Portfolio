@@ -51,10 +51,7 @@ export default function SaasUiCard() {
             </div>
 
             <p className="text-slate-700 dark:text-white/80 text-base leading-8">
-              An open source component library built accessibility-first.
-              Every component is designed in Figma, matched pixel-perfectly
-              in code, and verified against WCAG AA in Storybook. Ships with
-              three built-in themes — Violet, Amber, and Teal.
+              An accessibility-first component system designed for real SaaS interfaces. Each component is designed in Figma, implemented with pixel precision in code, and validated against WCAG AA in Storybook. Includes three fully tokenized themes — Violet, Amber, and Teal.
             </p>
 
             {/* Tags */}
