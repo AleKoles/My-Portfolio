@@ -211,14 +211,14 @@ const Hero = () => {
       </div>
 
       <div className="text-4xl text-gray-600 dark:text-gray-200 flex justify-center gap-16 py-3">
-        <a href="https://www.linkedin.com/in/oleksandra-kolesnikova/" target="_blank" rel="noreferrer noopener">
-          <AiFillLinkedin className="hover:scale-110 hover:text-black dark:hover:text-white" />
+        <a href="https://www.linkedin.com/in/oleksandra-kolesnikova/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn">
+          <AiFillLinkedin className="hover:scale-110 hover:text-black dark:hover:text-white transition-transform" />
         </a>
-        <a href="https://github.com/AleKoles" target="_blank" rel="noreferrer noopener">
-          <AiFillGithub className="hover:scale-110 hover:text-black dark:hover:text-white" />
+        <a href="https://github.com/AleKoles" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
+          <AiFillGithub className="hover:scale-110 hover:text-black dark:hover:text-white transition-transform" />
         </a>
-        <a href="mailto:kolesnikova.alexandra@gmail.com" target="_blank" rel="noreferrer noopener">
-          <AiOutlineMail className="hover:scale-110 hover:text-black dark:hover:text-white" />
+        <a href="mailto:kolesnikova.alexandra@gmail.com" target="_blank" rel="noreferrer noopener" aria-label="Email">
+          <AiOutlineMail className="hover:scale-110 hover:text-black dark:hover:text-white transition-transform" />
         </a>
       </div>
 
