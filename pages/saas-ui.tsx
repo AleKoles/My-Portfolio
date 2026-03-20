@@ -72,7 +72,7 @@ export default function SaasUiCard() {
             {/* Links */}
             <div className="flex flex-wrap gap-3">
               <a
-                href="https://saas-fu6y8zyag-alekoles-projects.vercel.app"
+                href="https://saas-ui-delta.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
                 className="box-border font-bold w-fit px-3 py-1 border-2 duration-150 ease-in-out rounded border-sky-700 dark:border-amber-400 text-white dark:text-slate-600 bg-sky-700 dark:bg-amber-400 hover:text-sky-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-opacity-0"
