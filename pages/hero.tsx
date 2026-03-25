@@ -22,10 +22,10 @@ const DEV_SKILLS = [
   { label: "GSAP",       Icon: SiGreensock    },
   { label: "Git",        Icon: FaGitAlt       },
   { label: "Sass",       Icon: DiSass         },
-  { label: "WCAG 2.2",   Icon: MdDevices      },
 ];
 
 const DESIGN_SKILLS = [
+  { label: "WCAG 2.2",   Icon: MdDevices      },
   { label: "Figma",          Icon: SiFigma                 },
   { label: "Design Systems", Icon: MdOutlineSpaceDashboard },
   { label: "UI/UX",          Icon: MdDevices               },
