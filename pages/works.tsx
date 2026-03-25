@@ -1,7 +1,7 @@
 import Image from "next/image";
 import author from "../public/Writerpage.webp";
 import bee from "../public/beefybee.webp";
-import animator from "../public/animator.webp";
+import animator from "../public/bansa.webp";
 import sart from "../public/s-art.webp";
 
 type ProjectCardProps = {
@@ -51,8 +51,7 @@ const ProjectCard = ({ image, alt, title, description, href }: ProjectCardProps)
 
 const Works = () => {
   return (
-    <section className="mx-auto max-w-7xl">
-      {/* Solo Projects */}
+    <section className="mx-auto max-w-7xl px-4">
       <div className="text-center pt-12 pb-8">
         <h3 className="font-semibold text-2xl md:text-3xl py-2 dark:text-white">
           Web Projects
@@ -98,22 +97,12 @@ const Works = () => {
 
         <ProjectCard
           image={animator}
-          alt="Animator Portfolio"
-          title="CG Artist Portfolio"
-          href="https://petrov-3d-animation.netlify.app/"
+          alt="Bahamas Air Naviagtion Services Authority"
+          title="BANSA Bahamas"
+          href="https://bansabahamas.com/"
           description={
             <>
-              Single page portfolio website built with Alpine.js, Vite, Tailwind CSS,
-              and GSAP. Find the source code on my{" "}
-              <a
-                className="text-sky-600 dark:text-amber-400"
-                target="_blank"
-                rel="noreferrer"
-                href="https://github.com/AleKoles/aha-animator"
-              >
-                GitHub
-              </a>
-              .
+              Architecting an interface for real-time NOTAMs and flight data. Navigated complex API mapping and rigid branding constraints.
             </>
           }
         />

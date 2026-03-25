@@ -205,8 +205,12 @@ const Hero = () => {
         <h2 className="font-bold text-4xl md:text-5xl text-sky-700 tracking-wide py-2 dark:text-white">
           Oleksandra Kolesnikova
         </h2>
-        <h3 className="font-semibold text-2xl md:text-3xl py-2 dark:text-amber-400">
-          Frontend Design Engineer
+        <h3 className="md:block hidden font-semibold text-2xl md:text-3xl py-2 dark:text-amber-400">
+         UX Engineer | Design Systems & Frontend
+        </h3>
+        <h3 className="md:hidden font-semibold text-2xl md:text-3xl py-2 dark:text-amber-400">
+         UX Engineer <br></br>
+         <span className="text-xl">Design Systems & Frontend</span>
         </h3>
       </div>
 
@@ -255,7 +259,7 @@ const Hero = () => {
       </div>
 
       <div className="max-w-4xl mx-auto text-lg lg:text-xl text-center text-slate-700 dark:text-white leading-8 px-4 ">
-        <p>Frontend Design Engineer operating at the intersection of design systems and frontend architecture. I transform high-fidelity concepts into accessible, scalable interfaces using React and modern CSS frameworks, ensuring seamless collaboration between design and engineering.</p>
+        <p>Design Engineer | UX Engineer working at the intersection of systems and frontend logic. I transform complex data into accessible, scalable interfaces using React and modern CSS, leveraging AI-assisted workflows to accelerate production-grade delivery.</p>
       </div>
     </section>
   );

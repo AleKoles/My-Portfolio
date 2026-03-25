@@ -63,11 +63,11 @@ useEffect(() => {
       {/* Canonical URL */}
       <link rel="canonical" href="https://kolesnikova-portfolio.netlify.app/" />
     </Head>
-      <main className="pb-16 px-4 bg-[#fff8e5] dark:bg-slate-600">
+      <main className="pb-16 bg-[#fff8e5] dark:bg-slate-600">
         <section>
-          <nav className="py-8 mx-auto max-w-7xl flex justify-between">
+          <nav className="px-4 py-8 mx-auto max-w-7xl flex justify-between">
             <h1 className="font-bold uppercase text-lg tracking-wide dark:text-white">
-              <span className="hidden sm:inline">Developer | UI/UX</span> Portfolio
+              <span className="hidden sm:inline">UX Engineer | Design Systems & Frontend</span> Portfolio
             </h1>
             <ul className="flex justify content-between gap-8 font-semibold">
               <li className="mt-1 hover:scale-110 ease-in-out duration-150 cursor-pointer">

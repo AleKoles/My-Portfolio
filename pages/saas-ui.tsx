@@ -5,7 +5,7 @@ const tags = ["React", "TypeScript", "Tailwind CSS", "Storybook", "Figma", "WCAG
 
 export default function SaasUiCard() {
   return (
-    <section className="mx-auto max-w-7xl">
+    <section className="mx-auto max-w-7xl px-4">
 
       {/* Section header */}
       <div className="text-center py-8">
