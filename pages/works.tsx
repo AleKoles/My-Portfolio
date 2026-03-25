@@ -83,7 +83,7 @@ const Works = () => {
           href="https://bansabahamas.com/notams.html"
           description={
             <>
-              Architecting mission-critical UI for real-time NOTAMs and flight data. 
+              UI for real-time NOTAMs and flight data. 
               Managed complex API integration and rigid accessibility standards 
               under strict national branding constraints.
             </>
