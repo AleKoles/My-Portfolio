@@ -9,8 +9,8 @@ export default function SaasUiCard() {
     <section className="mx-auto max-w-7xl px-4">
 
       {/* Section header - Tightened for Senior positioning */}
-      <div className="text-center py-8">
-        <h3 className="font-semibold text-2xl md:text-3xl py-2 dark:text-white uppercase tracking-tight">
+      <div className="text-center pb-8">
+        <h3 className="font-bold text-2xl md:text-3xl py-2 dark:text-white uppercase tracking-tighter opacity-90">
           SaaS Component Architecture
         </h3>
         <p className="dark:text-white/80 text-slate-700 md:text-lg max-w-2xl mx-auto">
@@ -19,7 +19,7 @@ export default function SaasUiCard() {
       </div>
 
       {/* Card */}
-      <div className="rounded-xl relative shadow-2xl overflow-hidden bg-[#fff9e8] dark:bg-slate-900 border border-slate-200 dark:border-slate-700 transition-all hover:border-sky-500/50 dark:hover:border-amber-400/50">
+      <div className="focusable-card group rounded-xl relative shadow-2xl overflow-hidden bg-[#fff9e8] dark:bg-slate-900 border border-slate-200 dark:border-slate-700 transition-all hover:border-sky-500/50 dark:hover:border-amber-400/50">
         <div className="flex flex-col lg:flex-row">
 
           {/* Image Overlay - Suggests "System Thinking" */}
@@ -66,12 +66,12 @@ export default function SaasUiCard() {
             </div>
 
             {/* Links - Consistent Pill Shape */}
-            <div className="flex flex-wrap gap-4 mt-2">
+            <div className="flex rounded-full flex-wrap gap-4 mt-2">
               <a
                 href="https://saas-ui-delta.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center font-bold px-6 py-2.5 transition-all rounded-full bg-sky-700 dark:bg-amber-400 text-white dark:text-slate-900 hover:bg-sky-800 dark:hover:bg-amber-300 shadow-md"
+                className="inline-flex outline-none items-center font-bold px-6 py-2.5 transition-all rounded-full bg-sky-700 dark:bg-amber-400 text-white dark:text-slate-900 hover:bg-sky-800 dark:hover:bg-amber-300 shadow-md"
               >
                 Live Storybook
               </a>
@@ -79,7 +79,7 @@ export default function SaasUiCard() {
                 href="https://github.com/AleKoles/saas-ui"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center font-bold px-6 py-2.5 border-2 border-slate-300 dark:border-slate-600 rounded-full text-slate-700 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                className="inline-flex outline-none items-center font-bold px-6 py-2.5 border-2 border-slate-300 dark:border-slate-600 rounded-full text-slate-700 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
               >
                 GitHub
               </a>
@@ -87,7 +87,7 @@ export default function SaasUiCard() {
                 href="https://www.figma.com/..."
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center font-bold px-6 py-2.5 border-2 border-slate-300 dark:border-slate-600 rounded-full text-slate-700 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                className="inline-flex outline-none items-center font-bold px-6 py-2.5 border-2 border-slate-300 dark:border-slate-600 rounded-full text-slate-700 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
               >
                 Figma
               </a>

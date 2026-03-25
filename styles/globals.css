@@ -99,3 +99,45 @@ h1, .mono {
   from { transform: translateX(-50%); }
   to   { transform: translateX(0); }
 }
+
+@layer base {
+
+  /* Inside your @layer base in globals.css */
+:focus-within {
+  outline: none;
+}
+
+/* This ensures that if a card has a link inside it that is focused, 
+   the ring appears AROUND the whole card, not just the text. */
+.focusable-card:focus-within {
+  @apply ring-2 ring-offset-4 ring-sky-700 dark:ring-amber-400 rounded-xl transition-shadow duration-300;
+  @apply ring-offset-[#fff8e5] dark:ring-offset-slate-900;
+} 
+
+  /* 1. Remove the default browser outline for all elements */
+  :focus-visible {
+    outline: none !important;
+  }
+
+  /* 2. Create the custom branded ring */
+  /* This targets any focusable element reached via keyboard */
+  :focus-visible {
+    @apply ring-2 ring-offset-2 transition-shadow duration-200;
+    
+    /* Light Mode: Sky Blue ring on your cream background */
+    @apply ring-sky-700 ring-offset-[#fff9e8];
+  }
+
+  /* 3. Dark Mode override */
+  .dark :focus-visible {
+    /* Dark Mode: Amber ring on your slate background */
+    @apply ring-amber-400 ring-offset-slate-900;
+  }
+
+  /* 4. Ensure rounded elements have rounded rings */
+  /* This makes sure the ring follows the shape of your buttons/icons */
+  a:focus-visible, 
+  button:focus-visible {
+    @apply rounded-[inherit];
+  }
+}

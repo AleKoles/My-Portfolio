@@ -72,22 +72,22 @@ export default function Home() {
 
           <ul className="flex items-center gap-3 sm:gap-6 md:gap-8">
             {/* Theme Toggle */}
-            <li className="flex items-center hover:scale-110 transition-transform cursor-pointer">
-              {darkMode ? (
-                <SlMagicWand
-                  className="text-xl md:text-2xl text-amber-400"
-                  onClick={() => setDarkMode(false)}
-                />
-              ) : (
-                <TbTie
-                  className="text-xl md:text-2xl text-sky-800"
-                  onClick={() => setDarkMode(true)}
-                />
-              )}
+            <li className="flex rounded-full items-center">
+              <button
+                onClick={() => setDarkMode(!darkMode)}
+                aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+                className="p-2 rounded-full transition-transform duration-200 hover:scale-110 active:scale-95"
+              >
+                {darkMode ? (
+                  <SlMagicWand className="text-xl md:text-2xl text-amber-400" />
+                ) : (
+                  <TbTie className="text-xl md:text-2xl text-sky-800" />
+                )}
+              </button>
             </li>
 
             {/* CV Button - Now Filled in both modes, compact for mobile */}
-            <li>
+            <li className="rounded-full">
               <Link
                 className="flex items-center gap-2 px-4 py-1.5 md:px-6 md:py-2 bg-sky-700 dark:bg-amber-400 text-white dark:text-slate-900 hover:bg-sky-800 dark:hover:bg-amber-300 rounded-full font-bold text-[12px] md:text-sm transition-all shadow-md active:scale-95"
                 href="https://drive.google.com/uc?export=download&id=1jWJ2oyqJnea-LKG_17UgPjK-PYkHRmEV"
@@ -104,13 +104,13 @@ export default function Home() {
           </ul>
         </nav>
       </section>
-
-        {/* Component Sections */}
+      <section className="space-y-28">
         <Hero />
-        <div className="space-y-32 mt-10">
-          <SaasUiCard />
-          <Works />
-        </div>
+        <SaasUiCard />
+        <Works />
+      </section>
+        {/* Component Sections */}
+       
         <Footer />
         <ScrollUp />
       </main>

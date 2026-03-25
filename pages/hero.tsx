@@ -198,7 +198,7 @@ const Hero = () => {
   const devLabels    = DEV_SKILLS.map(s => s.label);
 
   return (
-    <section className="h-fit mt-8 pb-16 overflow-hidden">
+    <section className="h-fit mt-8 overflow-hidden">
       {/* Title Section */}
       <div className="text-center p-6 space-y-4">
         <h2 className="font-extrabold text-4xl md:text-6xl text-slate-900 tracking-tighter dark:text-white transition-colors">
@@ -213,14 +213,14 @@ const Hero = () => {
       </div>
 
       {/* Socials */}
-      <div className="text-3xl text-slate-500 dark:text-slate-300 flex justify-center gap-12 pt-4 pb-8">
-        <a href="https://www.linkedin.com/in/oleksandra-kolesnikova/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn" className="hover:text-sky-700 dark:hover:text-amber-400 transition-colors duration-300">
+      <div className="text-3xl rounded-full text-slate-500 dark:text-slate-300 flex justify-center gap-12 pt-4 pb-8">
+        <a href="https://www.linkedin.com/in/oleksandra-kolesnikova/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn" className="hover:text-sky-700 dark:hover:text-amber-400 transition-colors duration-300 rounded-full">
           <AiFillLinkedin />
         </a>
-        <a href="https://github.com/AleKoles" target="_blank" rel="noreferrer noopener" aria-label="GitHub" className="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">
+        <a href="https://github.com/AleKoles" target="_blank" rel="noreferrer noopener" aria-label="GitHub" className="hover:text-slate-900 dark:hover:text-white transition-colors duration-300 rounded-full">
           <AiFillGithub />
         </a>
-        <a href="mailto:kolesnikova.alexandra@gmail.com" target="_blank" rel="noreferrer noopener" aria-label="Email" className="hover:text-sky-700 dark:hover:text-amber-400 transition-colors duration-300">
+        <a href="mailto:kolesnikova.alexandra@gmail.com" target="_blank" rel="noreferrer noopener" aria-label="Email" className="hover:text-sky-700 dark:hover:text-amber-400 transition-colors duration-300 rounded-full">
           <AiOutlineMail />
         </a>
       </div>
@@ -259,9 +259,7 @@ const Hero = () => {
       {/* Value Proposition */}
       <div className="max-w-4xl mx-auto text-center px-6">
         <p className="text-lg lg:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
-          I architect at the intersection of <span className="text-sky-700 dark:text-amber-400 font-bold underline underline-offset-8 decoration-sky-200 dark:decoration-amber-900/50">systems thinking</span> and frontend logic. 
-          Specializing in scalable React interfaces and API-driven integrations, 
-          I transform complex data into accessible, production-grade products.
+        I am a UX Engineer specializing in the architecture of Design Systems. I don’t just build interfaces; I build the logic and tokens that make them consistent, accessible, and scalable. By bridging the gap between Figma variables and React/Tailwind implementations, I eliminate handoff friction and turn design vision into production-ready code.
         </p>
       </div>
     </section>

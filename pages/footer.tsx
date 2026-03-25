@@ -16,7 +16,7 @@ const Footer = () => {
       </div>
 
       {/* Social icons - Updated with your brand colors */}
-      <div className="text-3xl text-slate-500 dark:text-slate-300 flex justify-center gap-12">
+      <div className="rounded-full text-3xl text-slate-500 dark:text-slate-300 flex justify-center gap-12">
         <a 
           href="https://www.linkedin.com/in/oleksandra-kolesnikova/" 
           target="_blank" 

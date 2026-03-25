@@ -14,7 +14,7 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ image, alt, title, description, href }: ProjectCardProps) => {
   return (
-    <div className="rounded-xl relative shadow-2xl overflow-hidden bg-[#fff9e8] dark:bg-slate-900 border border-slate-200 dark:border-slate-700 transition-all hover:border-sky-500/50 dark:hover:border-amber-400/50 group  hover:shadow-2xl">
+    <div className="focusable-card group rounded-xl relative shadow-2xl overflow-hidden bg-[#fff9e8] dark:bg-slate-900 border border-slate-200 dark:border-slate-700 transition-all hover:border-sky-500/50 dark:hover:border-amber-400/50 group  hover:shadow-2xl">
       <div className="relative w-full aspect-[16/10] overflow-hidden">
         <Image
           src={image}
@@ -41,19 +41,21 @@ const ProjectCard = ({ image, alt, title, description, href }: ProjectCardProps)
           </h4>
 
           {/* Description: Hidden until hover */}
-          <div className="max-h-0 group-hover:max-h-40 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden">
+          <div className="max-h-0 group-hover:max-h-40 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden">    
             <p className="text-slate-200 text-sm md:text-base leading-relaxed mb-4">
               {description}
             </p>
+            <div className="rounded-full">
+              <a
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block w-fit px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-150 border-2 border-amber-400 bg-amber-400 text-slate-900 hover:bg-transparent hover:text-amber-400 outline-none"
+              >
+                View Live Project
+              </a>
+            </div>
             
-            <a
-              href={href}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block w-fit px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-150 border-2 border-amber-400 bg-amber-400 text-slate-900 hover:bg-transparent hover:text-amber-400"
-            >
-              View Live Project
-            </a>
           </div>
         </div>
       </div>
@@ -63,9 +65,9 @@ const ProjectCard = ({ image, alt, title, description, href }: ProjectCardProps)
 
 const Works = () => {
   return (
-    <section className="mx-auto max-w-7xl px-4 mb-20">
-      <div className="text-center pt-20 pb-12">
-        <h3 className="font-bold text-3xl md:text-4xl py-2 dark:text-white uppercase tracking-tighter">
+    <section className="mx-auto max-w-7xl px-4">
+      <div className="text-center pb-8">
+        <h3 className="font-bold text-2xl md:text-3xl py-2 dark:text-white uppercase tracking-tighter opacity-90">
           Systems & Implementations
         </h3>
         <p className="dark:text-white/80 text-slate-700 md:text-lg max-w-2xl mx-auto">
