@@ -50,7 +50,7 @@ const ProjectCard = ({ image, alt, title, description, href }: ProjectCardProps)
                 href={href}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-block w-fit px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-150 border-2 border-amber-400 bg-amber-400 text-slate-900 hover:bg-transparent hover:text-amber-400 outline-none"
+                className="inline-flex outline-none items-center font-bold px-6 py-2.5 transition-all rounded-full bg-sky-700 dark:bg-amber-400 text-white dark:text-slate-900 hover:bg-sky-800 dark:hover:bg-amber-300 shadow-md"
               >
                 View Live Project
               </a>
