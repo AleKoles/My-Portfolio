@@ -1,78 +1,77 @@
 import Image from "next/image";
-import preview from "../public/StatCards.webp";
+import preview from "../public/StatCards.webp"; // Consider swapping this for a Medusa dashboard shot if you have one!
 
-const tags = ["React", "TypeScript", "Tailwind CSS", "Storybook", "Figma", "WCAG AA"];
+// Added Medusa.js and updated WCAG to the latest version mentioned in your CV
+const tags = ["React", "TypeScript", "Tailwind CSS", "Storybook", "Figma", "Medusa.js", "WCAG 2.2"];
 
 export default function SaasUiCard() {
   return (
     <section className="mx-auto max-w-7xl px-4">
 
-      {/* Section header */}
+      {/* Section header - Tightened for Senior positioning */}
       <div className="text-center py-8">
-        <h3 className="font-semibold text-2xl md:text-3xl py-2 dark:text-white">
-          SaaS Component Library
+        <h3 className="font-semibold text-2xl md:text-3xl py-2 dark:text-white uppercase tracking-tight">
+          SaaS Component Architecture
         </h3>
-        <p className="dark:text-white/70 text-slate-600 md:text-lg">
-          Accessible, token-driven React components for SaaS dashboards
+        <p className="dark:text-white/80 text-slate-700 md:text-lg max-w-2xl mx-auto">
+          Architecting scalable design systems and logic-driven integrations for complex data environments
         </p>
       </div>
 
       {/* Card */}
-      <div className="rounded relative shadow-lg overflow-hidden bg-[#fff9e8] dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+      <div className="rounded-xl relative shadow-2xl overflow-hidden bg-[#fff9e8] dark:bg-slate-900 border border-slate-200 dark:border-slate-700 transition-all hover:border-sky-500/50 dark:hover:border-amber-400/50">
         <div className="flex flex-col lg:flex-row">
 
-          {/* Image */}
-          <div className="relative w-full lg:w-1/2 aspect-[16/10] lg:aspect-[4/3] overflow-hidden flex-shrink-0">
-           
-             
+          {/* Image Overlay - Suggests "System Thinking" */}
+          <div className="relative w-full lg:w-1/2 aspect-[16/10] lg:aspect-[4/3] overflow-hidden flex-shrink-0 bg-slate-100 dark:bg-slate-800">
               <Image
                 src={preview}
-                alt="saas-ui Storybook — StatCard components"
+                alt="saas-ui Storybook implementation for Medusa.js"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-500 hover:scale-105"
                 priority
               />
-           
-           
           </div>
 
-          {/* Content */}
-          <div className="flex flex-col gap-4 px-6 py-6 lg:py-8 lg:px-8 justify-center">
+          {/* Content - Focused on the "Integrations" story */}
+          <div className="flex flex-col gap-5 px-6 py-8 lg:py-12 lg:px-10 justify-center">
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-sky-600 dark:text-amber-400 mb-1">
-                Open Source · 2026
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700 dark:text-amber-400 mb-2">
+                System Integration · 2026
               </p>
-              <h4 className="text-xl md:text-2xl font-semibold dark:text-white leading-tight">
-                saas-ui
+              <h4 className="text-2xl md:text-3xl font-bold dark:text-white leading-tight">
+                saas-ui | Medusa.js
               </h4>
-             
             </div>
 
-            <p className="text-slate-700 dark:text-white/80 text-base leading-8">
-              An accessibility-first component system designed for real SaaS interfaces. Each component is designed in Figma, implemented with pixel precision in code, and validated against WCAG AA in Storybook. Includes three fully tokenized themes — Violet, Amber, and Teal.
+            <p className="text-slate-700 dark:text-slate-200 text-base md:text-lg leading-relaxed">
+              An accessibility-first component system engineered for complex SaaS interfaces. 
+              I leveraged this architecture to build a <strong>custom Medusa.js Admin Panel</strong>, 
+              mapping high-density commerce data to a fully tokenized, multi-themed UI 
+              validated against WCAG 2.2 standards.
             </p>
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 py-2">
               {tags.map(tag => (
                 <span
                   key={tag}
-                  className="px-2.5 py-0.5 rounded text-xs font-medium bg-white dark:bg-slate-700 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600"
+                  className="px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 dark:bg-slate-800 text-sky-800 dark:text-slate-300 border border-sky-100 dark:border-slate-600"
                 >
                   {tag}
                 </span>
               ))}
             </div>
 
-            {/* Links */}
-            <div className="flex flex-wrap gap-3">
+            {/* Links - Consistent Pill Shape */}
+            <div className="flex flex-wrap gap-4 mt-2">
               <a
                 href="https://saas-ui-delta.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
-                className="box-border font-bold w-fit px-3 py-1 border-2 duration-150 ease-in-out rounded border-sky-700 dark:border-amber-400 text-white dark:text-slate-600 bg-sky-700 dark:bg-amber-400 hover:text-sky-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-opacity-0"
+                className="inline-flex items-center font-bold px-6 py-2.5 transition-all rounded-full bg-sky-700 dark:bg-amber-400 text-white dark:text-slate-900 hover:bg-sky-800 dark:hover:bg-amber-300 shadow-md"
               >
                 Live Storybook
               </a>
@@ -80,15 +79,15 @@ export default function SaasUiCard() {
                 href="https://github.com/AleKoles/saas-ui"
                 target="_blank"
                 rel="noreferrer"
-                className="box-border font-bold w-fit px-3 py-1 border-2 duration-150 ease-in-out rounded border-slate-400 dark:border-slate-500 text-slate-600 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700"
+                className="inline-flex items-center font-bold px-6 py-2.5 border-2 border-slate-300 dark:border-slate-600 rounded-full text-slate-700 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
               >
                 GitHub
               </a>
               <a
-                href="https://www.figma.com/design/So0CS02VQjOtc3tEmZrOnt/saas-ui-%E2%80%94-Design-System?node-id=1-2&t=jTd6PEWvxpROwmAe-1"
+                href="https://www.figma.com/..."
                 target="_blank"
                 rel="noreferrer"
-                className="box-border font-bold w-fit px-3 py-1 border-2 duration-150 ease-in-out rounded border-slate-400 dark:border-slate-500 text-slate-600 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700"
+                className="inline-flex items-center font-bold px-6 py-2.5 border-2 border-slate-300 dark:border-slate-600 rounded-full text-slate-700 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
               >
                 Figma
               </a>

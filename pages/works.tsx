@@ -14,36 +14,48 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ image, alt, title, description, href }: ProjectCardProps) => {
   return (
-    <div className="rounded relative group shadow-lg overflow-hidden">
-       <div className="relative w-full aspect-[16/10]">
+    <div className="rounded-xl relative shadow-2xl overflow-hidden bg-[#fff9e8] dark:bg-slate-900 border border-slate-200 dark:border-slate-700 transition-all hover:border-sky-500/50 dark:hover:border-amber-400/50 group  hover:shadow-2xl">
+      <div className="relative w-full aspect-[16/10] overflow-hidden">
         <Image
           src={image}
           alt={alt}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
           priority={false}
         />
       </div>
 
-      {/* Overlay */}
-      <div className="absolute transform lg:translate-y-3/4 group-hover:translate-y-0 transition-all duration-300 bottom-0 left-0 w-full flex flex-col gap-4 px-4 py-3 bg-[#fff8e5] bg-opacity-80 sm:bg-opacity-90 dark:bg-slate-600 dark:bg-opacity-80">
-        <p className="lg:group-hover:mb-0 text-lg md:text-xl font-semibold group-hover:pb-0 transition-all duration-300 dark:text-white">
-          {title}
-        </p>
-
-        <div className="hidden sm:block lg:opacity-0 group-hover:opacity-100 transition-all duration-300 text-slate-600 dark:text-white leading-6 lg:leading-8">
-          {description}
+      {/* The Legibility Fix: Glassmorphism Footer & Overlay */}
+      <div className="absolute inset-0 flex flex-col justify-end">
+        {/* This div is the key: it provides a dark base for the title that is always visible */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent translate-y-[82%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
+          {/* Background blur only on the dark part for extra "pop" */}
+          <div className="absolute inset-0 backdrop-blur-[2px] group-hover:backdrop-blur-md transition-all" />
         </div>
 
-        <a
-          href={href}
-          target="_blank"
-          rel="noreferrer"
-          className="md:mb-2 box-border font-bold w-fit px-3 py-1 border-2 duration-150 ease-in-out rounded border-sky-700 dark:border-amber-400 text-white dark:text-slate-600 bg-sky-700 dark:bg-amber-400 hover:text-sky-700 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-opacity-0"
-        >
-          Visit this Webpage
-        </a>
+        {/* Content Layer */}
+        <div className="relative p-6 flex flex-col gap-3 z-10">
+          <h4 className="text-xl md:text-2xl font-bold text-white tracking-tight drop-shadow-md">
+            {title}
+          </h4>
+
+          {/* Description: Hidden until hover */}
+          <div className="max-h-0 group-hover:max-h-40 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden">
+            <p className="text-slate-200 text-sm md:text-base leading-relaxed mb-4">
+              {description}
+            </p>
+            
+            <a
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block w-fit px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-150 border-2 border-amber-400 bg-amber-400 text-slate-900 hover:bg-transparent hover:text-amber-400"
+            >
+              View Live Project
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -51,71 +63,70 @@ const ProjectCard = ({ image, alt, title, description, href }: ProjectCardProps)
 
 const Works = () => {
   return (
-    <section className="mx-auto max-w-7xl px-4">
-      <div className="text-center pt-12 pb-8">
-        <h3 className="font-semibold text-2xl md:text-3xl py-2 dark:text-white">
-          Web Projects
+    <section className="mx-auto max-w-7xl px-4 mb-20">
+      <div className="text-center pt-20 pb-12">
+        <h3 className="font-bold text-3xl md:text-4xl py-2 dark:text-white uppercase tracking-tighter">
+          Systems & Implementations
         </h3>
-        <p className="dark:text-white/70 text-slate-600 md:text-lg">From idea to deployment</p>
+        <p className="dark:text-white/80 text-slate-700 md:text-lg max-w-2xl mx-auto">
+          From idea to delivery
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-around">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <ProjectCard
-          image={author}
-          alt="Personal Author's Website"
-          title="Author&apos;s Personal Website"
-          href="https://alexandrajpeters.com/"
+          image={animator}
+          alt="Bahamas Air Navigation Services Authority"
+          title="Aviation Data Systems"
+          href="https://bansabahamas.com/notams.html"
           description={
             <>
-              A React.js multipage website with EmailOctopus integration and a Kindle
-              Cover Guides Generator (exports PNG with guides).
+              Architecting mission-critical UI for real-time NOTAMs and flight data. 
+              Managed complex API integration and rigid accessibility standards 
+              under strict national branding constraints.
             </>
           }
         />
-
+        
+        <ProjectCard
+          image={sart}
+          alt="S-Art E-Commerce Website"
+          title="E-Commerce Architecture"
+          href="https://s-art.work/"
+          description={
+            <>
+              High-performance storefront engineered with MODX, Alpine.js, and GSAP. 
+              Focused on fluid state transitions and scalable component logic.
+            </>
+          }
+        />
+       
         <ProjectCard
           image={bee}
           alt="BeefyBee Website"
-          title="B2B Web Agency"
+          title="B2B Web Systems"
           href="https://beefybee.com/"
           description={
             <>
-              A bilingual SPA for a Ukrainian web agency. Made with React, Tailwind CSS,
-              and GSAP. Find the source code on my{" "}
-              <a
-                className="text-sky-600 dark:text-amber-400"
-                target="_blank"
-                rel="noreferrer"
-                href="https://github.com/AleKoles/web_agency"
-              >
-                GitHub
-              </a>
-              .
+              Bilingual SPA developed for a creative agency. Built with React and 
+              Tailwind CSS, featuring high-performance animations via GSAP.
             </>
           }
         />
 
         <ProjectCard
-          image={animator}
-          alt="Bahamas Air Naviagtion Services Authority"
-          title="BANSA Bahamas"
-          href="https://bansabahamas.com/"
+          image={author}
+          alt="Personal Author's Website"
+          title="Product Portfolio"
+          href="https://alexandrajpeters.com/"
           description={
             <>
-              Architecting an interface for real-time NOTAMs and flight data. Navigated complex API mapping and rigid branding constraints.
+              React.js multipage platform featuring custom tool development, including 
+              a Kindle Cover Guide Generator with automated PNG export logic.
             </>
           }
         />
-      <ProjectCard
-          image={sart}
-          alt="S-Art E-Commerce Website"
-          title="S-Art E-Commerce Webpage"
-          href="https://s-art.work/"
-          description={<>From wireframe and prototype to frontend implementation with MODX, Alpine.js, GSAP, and Tailwind.</>}
-        />
-        
       </div>
-
     </section>
   );
 };

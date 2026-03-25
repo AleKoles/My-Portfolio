@@ -1,7 +1,7 @@
 import { AiOutlineMail, AiFillGithub, AiFillLinkedin, AiOutlineHtml5 } from "react-icons/ai";
 import {
   SiCss3, SiGreensock, SiReact, SiTailwindcss,
-  SiAlpinedotjs, SiFigma, SiJavascript,
+  SiAlpinedotjs, SiFigma, SiJavascript, SiTypescript, SiStorybook, SiNextdotjs
 } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { BsBootstrap } from "react-icons/bs";
@@ -13,29 +13,28 @@ import avatarDark from "../public/SplitOK.png";
 import { useRef, useEffect, useState } from "react";
 
 const DEV_SKILLS = [
-  { label: "HTML5",      Icon: AiOutlineHtml5 },
-  { label: "CSS3",       Icon: SiCss3         },
-  { label: "JavaScript", Icon: SiJavascript   },
+  { label: "TypeScript", Icon: SiTypescript   },
   { label: "React",      Icon: SiReact        },
+  { label: "Next.js",    Icon: SiNextdotjs    },
+  { label: "Storybook",  Icon: SiStorybook    },
   { label: "Tailwind",   Icon: SiTailwindcss  },
-  { label: "Alpine.js",  Icon: SiAlpinedotjs  },
+  { label: "JavaScript", Icon: SiJavascript   },
   { label: "GSAP",       Icon: SiGreensock    },
   { label: "Git",        Icon: FaGitAlt       },
-  { label: "Bootstrap",  Icon: BsBootstrap    },
   { label: "Sass",       Icon: DiSass         },
+  { label: "WCAG 2.2",   Icon: MdDevices      },
 ];
 
 const DESIGN_SKILLS = [
-  { label: "Illustrator",    Icon: DiIllustrator           },
-  { label: "UI/UX",          Icon: MdDevices               },
-  { label: "Photoshop",      Icon: DiPhotoshop             },
   { label: "Figma",          Icon: SiFigma                 },
-  { label: "User Journey",   Icon: MdOutlineMap            },
-  { label: "Prototyping",    Icon: MdOutlineAccountTree    },
   { label: "Design Systems", Icon: MdOutlineSpaceDashboard },
+  { label: "UI/UX",          Icon: MdDevices               },
+  { label: "Prototyping",    Icon: MdOutlineAccountTree    },
+  { label: "User Journey",   Icon: MdOutlineMap            },
+  { label: "Illustrator",    Icon: DiIllustrator           },
+  { label: "Photoshop",      Icon: DiPhotoshop             },
 ];
 
-// 11 rows — middle row (index 5) is fully opaque, fades toward edges
 const ROW_OPACITY = [0.08, 0.15, 0.25, 0.45, 0.7, 1, 0.7, 0.45, 0.25, 0.15, 0.08];
 
 function MarqueeRow({
@@ -56,7 +55,6 @@ function MarqueeRow({
   const dur      = `${labels.length * speed}s`;
   const animName = direction === "left" ? "marqueeLeft" : "marqueeRight";
 
-
   const mask =
     side === "left"
       ? "linear-gradient(to left,  transparent 0%, black 28%, black 100%)"
@@ -72,7 +70,7 @@ function MarqueeRow({
       }}
     >
       <span
-        className="inline-block text-sm font-bold tracking-widest uppercase text-gray-500 dark:text-gray-400"
+        className="inline-block text-sm font-bold tracking-widest uppercase text-gray-400 dark:text-slate-500"
         style={{
           fontFamily: "'JetBrains Mono', monospace",
           animation: `${animName} ${dur} linear infinite`,
@@ -158,9 +156,9 @@ function Badge({ label, Icon, x, y, delay, iconSize }: Skill & { x: number; y: n
       }}
       className="opacity-0 animate-[badgeFadeIn_0.45s_ease_forwards]"
     >
-      <div className="flex flex-col items-center gap-0.5 cursor-default text-center text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white hover:scale-110 transition-all duration-150 ease-in-out">
+      <div className="flex flex-col items-center gap-0.5 cursor-default text-center text-slate-500 dark:text-slate-400 hover:text-sky-700 dark:hover:text-amber-400 hover:scale-110 transition-all duration-150 ease-in-out">
         <Icon size={iconSize} />
-        <span style={{ fontSize: iconSize * 0.38 }} className="font-bold tracking-wide whitespace-nowrap">
+        <span style={{ fontSize: iconSize * 0.38 }} className="font-bold tracking-wide uppercase whitespace-nowrap">
           {label}
         </span>
       </div>
@@ -183,7 +181,7 @@ const Hero = () => {
   const containerW = useContainerWidth();
   const BADGE_COL  = 72;
 
-  const maxImgW = containerW >= 1280 ? 540 : 360;
+  const maxImgW = containerW >= 1280 ? 520 : 360;
   const imgW    = Math.min(maxImgW, containerW - BADGE_COL * 2 - 32);
   const imgH    = imgW * (420 / 360);
   const iconSize = Math.round(14 + (imgW / maxImgW) * 18);
@@ -200,35 +198,35 @@ const Hero = () => {
   const devLabels    = DEV_SKILLS.map(s => s.label);
 
   return (
-    <section className="h-fit mt-4 pb-16">
-      <div className="text-center p-6">
-        <h2 className="font-bold text-4xl md:text-5xl text-sky-700 tracking-wide py-2 dark:text-white">
+    <section className="h-fit mt-8 pb-16 overflow-hidden">
+      {/* Title Section */}
+      <div className="text-center p-6 space-y-4">
+        <h2 className="font-extrabold text-4xl md:text-6xl text-slate-900 tracking-tighter dark:text-white transition-colors">
           Oleksandra Kolesnikova
         </h2>
-        <h3 className="md:block hidden font-semibold text-2xl md:text-3xl py-2 dark:text-amber-400">
-         UX Engineer | Design Systems & Frontend
-        </h3>
-        <h3 className="md:hidden font-semibold text-2xl md:text-3xl py-2 dark:text-amber-400">
-         UX Engineer <br></br>
-         <span className="text-xl">Design Systems & Frontend</span>
-        </h3>
+        
+        <div className="inline-block px-4 py-1.5 rounded-full bg-sky-50 dark:bg-amber-900/10 border border-sky-100 dark:border-amber-900/20">
+            <h3 className="font-bold text-sm md:text-lg text-sky-800 dark:text-amber-400 tracking-[0.2em] uppercase">
+                UX Engineer | Design Systems & Frontend
+            </h3>
+        </div>
       </div>
 
-      <div className="text-4xl text-gray-600 dark:text-gray-200 flex justify-center gap-16 py-3">
-        <a href="https://www.linkedin.com/in/oleksandra-kolesnikova/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn">
-          <AiFillLinkedin className="hover:scale-110 hover:text-black dark:hover:text-white transition-transform" />
+      {/* Socials */}
+      <div className="text-3xl text-slate-500 dark:text-slate-300 flex justify-center gap-12 pt-4 pb-8">
+        <a href="https://www.linkedin.com/in/oleksandra-kolesnikova/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn" className="hover:text-sky-700 dark:hover:text-amber-400 transition-colors duration-300">
+          <AiFillLinkedin />
         </a>
-        <a href="https://github.com/AleKoles" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
-          <AiFillGithub className="hover:scale-110 hover:text-black dark:hover:text-white transition-transform" />
+        <a href="https://github.com/AleKoles" target="_blank" rel="noreferrer noopener" aria-label="GitHub" className="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">
+          <AiFillGithub />
         </a>
-        <a href="mailto:kolesnikova.alexandra@gmail.com" target="_blank" rel="noreferrer noopener" aria-label="Email">
-          <AiOutlineMail className="hover:scale-110 hover:text-black dark:hover:text-white transition-transform" />
+        <a href="mailto:kolesnikova.alexandra@gmail.com" target="_blank" rel="noreferrer noopener" aria-label="Email" className="hover:text-sky-700 dark:hover:text-amber-400 transition-colors duration-300">
+          <AiOutlineMail />
         </a>
       </div>
 
-
-      {/* design marquee | badge ring | dev marquee */}
-      <div className="flex items-stretch gap-0 mt-10 mb-12">
+      {/* Interactive Ring Section */}
+      <div className="flex items-center gap-0 mt-4 mb-16">
         <SkillMarquees labels={designLabels} baseDirection="left" />
 
         <div
@@ -243,8 +241,8 @@ const Hero = () => {
               width: imgW, height: imgH,
             }}
           >
-            <Image src={avatar}     className="dark:hidden"              alt="Oleksandra Kolesnikova" />
-            <Image src={avatarDark} className="hidden w-full dark:block" alt="Oleksandra Kolesnikova" />
+            <Image src={avatar} className="dark:hidden object-cover" alt="Oleksandra Kolesnikova" />
+            <Image src={avatarDark} className="hidden w-full dark:block object-cover" alt="Oleksandra Kolesnikova" />
           </div>
 
           {DESIGN_SKILLS.map((s, i) => (
@@ -258,8 +256,13 @@ const Hero = () => {
         <SkillMarquees labels={devLabels} baseDirection="right" />
       </div>
 
-      <div className="max-w-4xl mx-auto text-lg lg:text-xl text-center text-slate-700 dark:text-white leading-8 px-4 ">
-        <p>Design Engineer | UX Engineer working at the intersection of systems and frontend logic. I transform complex data into accessible, scalable interfaces using React and modern CSS, leveraging AI-assisted workflows to accelerate production-grade delivery.</p>
+      {/* Value Proposition */}
+      <div className="max-w-4xl mx-auto text-center px-6">
+        <p className="text-lg lg:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
+          I architect at the intersection of <span className="text-sky-700 dark:text-amber-400 font-bold underline underline-offset-8 decoration-sky-200 dark:decoration-amber-900/50">systems thinking</span> and frontend logic. 
+          Specializing in scalable React interfaces and API-driven integrations, 
+          I transform complex data into accessible, production-grade products.
+        </p>
       </div>
     </section>
   );
