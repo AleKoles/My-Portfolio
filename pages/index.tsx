@@ -12,27 +12,23 @@ import Hero from "./hero";
 import SaasUiCard from "./saas-ui";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(true); // safe SSR default
+  const [mounted, setMounted] = useState(false);
 
-  // Load saved theme on first mount
   useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    if (saved === "light") {
-      setDarkMode(false);
-    } else {
-      setDarkMode(true);
-    }
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setDarkMode(prefersDark);
+    setMounted(true);
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("theme", darkMode ? "dark" : "light");
-    // This physically adds the class to the html tag for Tailwind's dark: modifiers
+    if (!mounted) return;
     if (darkMode) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
-  }, [darkMode]);
+  }, [darkMode, mounted]);
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -44,73 +40,72 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" href="/favicon.svg" />
-        
-        {/* SEO Keywords update */}
-        <meta name="keywords" content="Design Engineer, UX Engineer, Design Systems, React, TypeScript, Medusa.js, Storybook, Chromatic, Tailwind CSS, Frontend Architecture" />
-        
-        {/* OG Tags update */}
-        <meta property="og:title" content="Oleksandra Kolesnikova | Senior Design Engineer" />
-        <meta property="og:image" content="https://kolesnikova-portfolio.netlify.app/Kolesnikova2.webp" />
+        <meta
+          name="keywords"
+          content="Design Engineer, UX Engineer, Design Systems, React, TypeScript, Medusa.js, Storybook, Chromatic, Tailwind CSS, Frontend Architecture"
+        />
+        <meta
+          property="og:title"
+          content="Oleksandra Kolesnikova | Senior Design Engineer"
+        />
+        <meta
+          property="og:image"
+          content="https://kolesnikova-portfolio.netlify.app/Kolesnikova2.webp"
+        />
         <link rel="canonical" href="https://kolesnikova-portfolio.netlify.app/" />
       </Head>
 
-      {/* Changed bg-slate-600 to bg-slate-900 for a more premium dark mode feel */}
       <main className="min-h-screen pb-16 bg-[#fff9e8] dark:bg-slate-900 transition-colors duration-500">
-      <section className="sticky top-0 z-50 bg-[#fff9e8] dark:bg-slate-900 shadow-sm transition-colors duration-500">
-        <nav className="px-4 py-3 md:px-6 md:py-4 mx-auto max-w-7xl flex justify-between items-center">
-          
-          {/* Nav Branding - Kept on one line with name only for mobile */}
-          <div className="flex items-center">
-            <h1 className="font-bold uppercase text-[13px] sm:text-sm md:text-base tracking-widest dark:text-white">
-              <span className="text-sky-700 dark:text-amber-400">Oleksandra</span> Kolesnikova
-            </h1>
-            {/* Title only visible on Desktop to save space */}
-            <span className="hidden lg:inline opacity-60 ml-3 font-medium tracking-normal normal-case text-sm dark:text-slate-400 border-l border-slate-300 dark:border-slate-700 pl-3">
-              UX Engineer
-            </span>
-          </div>
+        <section className="sticky top-0 z-50 bg-[#fff9e8] dark:bg-slate-900 shadow-sm transition-colors duration-500">
+          <nav className="px-4 py-3 md:px-6 md:py-4 mx-auto max-w-7xl flex justify-between items-center">
+            <div className="flex items-center">
+              <h1 className="font-bold uppercase text-[13px] sm:text-sm md:text-base tracking-widest dark:text-white">
+                <span className="text-sky-700 dark:text-amber-400">Oleksandra</span>{" "}
+                Kolesnikova
+              </h1>
+              <span className="hidden lg:inline opacity-60 ml-3 font-medium tracking-normal normal-case text-sm dark:text-slate-400 border-l border-slate-300 dark:border-slate-700 pl-3">
+                UX Engineer
+              </span>
+            </div>
 
-          <ul className="flex items-center gap-3 sm:gap-6 md:gap-8">
-            {/* Theme Toggle */}
-            <li className="flex rounded-full items-center">
-              <button
-                onClick={() => setDarkMode(!darkMode)}
-                aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-                className="p-2 rounded-full transition-transform duration-200 hover:scale-110 active:scale-95"
-              >
-                {darkMode ? (
-                  <SlMagicWand className="text-xl md:text-2xl text-amber-400" />
+            <ul className="flex items-center gap-3 sm:gap-6 md:gap-8">
+              <li className="flex rounded-full items-center">
+                {mounted ? (
+                  <button
+                    onClick={() => setDarkMode(!darkMode)}
+                    aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+                    className="p-2 rounded-full transition-transform duration-200 hover:scale-110 active:scale-95"
+                  >
+                    {darkMode ? (
+                      <SlMagicWand className="text-xl md:text-2xl text-amber-400" />
+                    ) : (
+                      <TbTie className="text-xl md:text-2xl text-sky-800" />
+                    )}
+                  </button>
                 ) : (
-                  <TbTie className="text-xl md:text-2xl text-sky-800" />
+                  <div className="p-2 w-8 h-8" />
                 )}
-              </button>
-            </li>
+              </li>
 
-            {/* CV Button - Now Filled in both modes, compact for mobile */}
-            <li className="rounded-full">
-              <Link
-                className="flex items-center gap-2 px-4 py-1.5 md:px-6 md:py-2 bg-sky-700 dark:bg-amber-400 text-white dark:text-slate-900 hover:bg-sky-800 dark:hover:bg-amber-300 rounded-full font-bold text-[12px] md:text-sm transition-all shadow-md active:scale-95"
-                href="https://drive.google.com/uc?export=download&id=1uzkPnRTpDDnruGJ21kk1q5QT3FheikMX"
-              >
-                <span className="tracking-widest">CV</span>
-                {/* Using a simple SVG icon for the download arrow */}
-                
-                <IoCloudDownloadOutline
-                  className="text-xl md:text-2xl"
-                  onClick={() => setDarkMode(true)}
-                />
-              </Link>
-            </li> 
-          </ul>
-        </nav>
-      </section>
-      <section className="space-y-28">
-        <Hero />
-        <SaasUiCard />
-        <Works />
-      </section>
-        {/* Component Sections */}
-       
+              <li className="rounded-full">
+                <Link
+                  className="flex items-center gap-2 px-4 py-1.5 md:px-6 md:py-2 bg-sky-700 dark:bg-amber-400 text-white dark:text-slate-900 hover:bg-sky-800 dark:hover:bg-amber-300 rounded-full font-bold text-[12px] md:text-sm transition-all shadow-md active:scale-95"
+                  href="https://drive.google.com/uc?export=download&id=1uzkPnRTpDDnruGJ21kk1q5QT3FheikMX"
+                >
+                  <span className="tracking-widest">CV</span>
+                  <IoCloudDownloadOutline className="text-xl md:text-2xl" />
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section className="space-y-28">
+          <Hero />
+          <SaasUiCard />
+          <Works />
+        </section>
+
         <Footer />
         <ScrollUp />
       </main>
