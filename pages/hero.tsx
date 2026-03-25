@@ -159,7 +159,7 @@ function Badge({ label, Icon, x, y, delay, iconSize }: Skill & { x: number; y: n
     >
       <div className="flex flex-col items-center gap-0.5 cursor-default text-center text-slate-500 dark:text-slate-400 hover:text-sky-700 dark:hover:text-amber-400 hover:scale-110 transition-all duration-150 ease-in-out">
         <Icon size={iconSize} />
-        <span style={{ fontSize: iconSize * 0.38 }} className="font-bold tracking-wide uppercase whitespace-nowrap">
+        <span style={{ fontSize: iconSize * 0.30 }} className="font-bold tracking-wide uppercase whitespace-nowrap">
           {label}
         </span>
       </div>
