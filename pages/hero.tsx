@@ -5,6 +5,7 @@ import {
 } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { BsBootstrap } from "react-icons/bs";
+import { SiNotion } from "react-icons/si"
 import { DiPhotoshop, DiSass, DiIllustrator } from "react-icons/di";
 import { MdDevices, MdOutlineMap, MdOutlineAccountTree, MdOutlineSpaceDashboard } from "react-icons/md";
 import Image from "next/image";
@@ -217,7 +218,10 @@ const Hero = () => {
         <a href="https://www.linkedin.com/in/oleksandra-kolesnikova/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn" className="hover:text-sky-700 dark:hover:text-amber-400 transition-colors duration-300 rounded-full">
           <AiFillLinkedin />
         </a>
-        <a href="https://github.com/AleKoles" target="_blank" rel="noreferrer noopener" aria-label="GitHub" className="hover:text-slate-900 dark:hover:text-white transition-colors duration-300 rounded-full">
+        <a href="https://designengineer.notion.site/Portfolio-Oleksandra-Kolesnikova-UX-Engineer-Design-Systems-31065fba42288006af6fe357f8f6423c?pvs=143" target="_blank" rel="noreferrer noopener" aria-label="Notion Case Study" className="hover:text-sky-700 dark:hover:text-amber-400 transition-colors duration-300">
+          <SiNotion /> 
+        </a>
+        <a href="https://github.com/AleKoles" target="_blank" rel="noreferrer noopener" aria-label="GitHub" className="dark:hover:text-amber-400 hover:text-sky-700 transition-colors duration-300 rounded-full">
           <AiFillGithub />
         </a>
         <a href="mailto:kolesnikova.alexandra@gmail.com" target="_blank" rel="noreferrer noopener" aria-label="Email" className="hover:text-sky-700 dark:hover:text-amber-400 transition-colors duration-300 rounded-full">

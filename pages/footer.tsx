@@ -1,4 +1,5 @@
 import { AiOutlineMail, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { SiNotion } from "react-icons/si"
 
 const Footer = () => {
   return (
@@ -26,12 +27,15 @@ const Footer = () => {
         >
           <AiFillLinkedin />
         </a>
+         <a href="https://designengineer.notion.site/Portfolio-Oleksandra-Kolesnikova-UX-Engineer-Design-Systems-31065fba42288006af6fe357f8f6423c?pvs=143" target="_blank" rel="noreferrer noopener" aria-label="Notion Case Study" className="hover:text-sky-700 dark:hover:text-amber-400 transition-colors duration-300">
+            <SiNotion /> 
+        </a>
         <a 
           href="https://github.com/AleKoles" 
           target="_blank" 
           rel="noreferrer noopener" 
           aria-label="GitHub"
-          className="hover:text-slate-900 dark:hover:text-white transition-colors duration-300"
+          className="hover:text-sky-700 dark:hover:text-amber-400 transition-colors duration-300"
         >
           <AiFillGithub />
         </a>
