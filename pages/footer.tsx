@@ -12,7 +12,7 @@ const Footer = () => {
           <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500 dark:bg-amber-500"></span>
         </span>
         <span className="text-xs md:text-sm text-sky-800 dark:text-amber-200 font-semibold tracking-wide">
-          Open to UX Engineer & Design System roles
+          Open to Product Design & UX Engineering roles
         </span>
       </div>
 
@@ -56,7 +56,7 @@ const Footer = () => {
           Oleksandra Kolesnikova
         </p>
         <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-          UX Engineer | Design Systems & Frontend
+         UX Engineer | Product Designer | Systems Architect
         </p>
         <p className="text-[10px] text-slate-400 dark:text-slate-600 pt-4 uppercase tracking-tighter">
           © {new Date().getFullYear()} — Built with React & Type-Safe Intent
