@@ -208,7 +208,7 @@ const Hero = () => {
         
         <div className="inline-block px-4 py-1.5 rounded-full bg-sky-50 dark:bg-amber-900/10 border border-sky-100 dark:border-amber-900/20">
             <h3 className="font-bold text-sm md:text-lg text-sky-800 dark:text-amber-400 tracking-[0.2em] uppercase">
-                UX Engineer | Design Systems & Frontend
+            Product Designer | Design Systems & Frontend
             </h3>
         </div>
       </div>
@@ -261,10 +261,11 @@ const Hero = () => {
       </div>
 
       {/* Value Proposition */}
-      <div className="max-w-4xl mx-auto text-center px-6">
-        <p className="text-lg lg:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
-        I am a UX Engineer specializing in the architecture of Design Systems. I don’t just build interfaces; I build the logic and tokens that make them consistent, accessible, and scalable. By bridging the gap between Figma variables and React/Tailwind implementations, I eliminate handoff friction and turn design vision into production-ready code.
+      <div className="max-w-4xl flex flex-col gap-4 mx-auto text-center px-6">
+        <p className="text-lg lg:text-xl text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
+        I’m a Product Designer and UX Engineer specializing in Design Systems and scalable UI architecture. I work across the full product lifecycle—from shaping user experiences to designing the underlying systems that power them.
         </p>
+        <p className="text-lg lg:text-xl text-slate-700 dark:text-slate-300 leading-relaxed font-medium">Rather than focusing only on UI, I define the logic, tokens, and component structures that ensure consistency, accessibility, and scalability across products. By bridging Figma variables with React and Tailwind implementations, I reduce design–development friction and help teams turn design intent into production-ready interfaces.</p>
       </div>
     </section>
   );

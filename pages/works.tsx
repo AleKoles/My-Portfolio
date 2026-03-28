@@ -68,10 +68,10 @@ const Works = () => {
     <section className="mx-auto max-w-7xl px-4">
       <div className="text-center pb-8">
         <h3 className="font-bold text-2xl md:text-3xl py-2 dark:text-white uppercase tracking-tighter opacity-90">
-          Systems & Implementations
+        Systems & Interface Implementation
         </h3>
         <p className="dark:text-white/80 text-slate-700 md:text-lg max-w-2xl mx-auto">
-          From idea to delivery
+        From concept to production-ready experiences
         </p>
       </div>
 
@@ -83,9 +83,7 @@ const Works = () => {
           href="https://bansabahamas.com/notams.html"
           description={
             <>
-              UI for real-time NOTAMs and flight data. 
-              Managed complex API integration and rigid accessibility standards 
-              under strict national branding constraints.
+              UI for real-time NOTAMs and flight data, integrating complex APIs while maintaining strict accessibility and national branding constraints.
             </>
           }
         />
@@ -97,8 +95,7 @@ const Works = () => {
           href="https://s-art.work/"
           description={
             <>
-              High-performance storefront engineered with MODX, Alpine.js, and GSAP. 
-              Focused on fluid state transitions and scalable component logic.
+              High-performance storefront built with MODX, Alpine.js, and GSAP, focused on fluid state transitions and scalable component logic.
             </>
           }
         />
@@ -110,8 +107,9 @@ const Works = () => {
           href="https://beefybee.com/"
           description={
             <>
-              Bilingual SPA developed for a creative agency. Built with React and 
-              Tailwind CSS, featuring high-performance animations via GSAP.
+              <p>
+                Bilingual SPA for a creative agency, built with React and Tailwind CSS, featuring high-performance GSAP animations.
+              </p>
             </>
           }
         />
@@ -123,8 +121,9 @@ const Works = () => {
           href="https://alexandrajpeters.com/"
           description={
             <>
-              React.js multipage platform featuring custom tool development, including 
-              a Kindle Cover Guide Generator with automated PNG export logic.
+              <p>
+              React multipage platform with custom tools, including a Kindle Cover Guide Generator with automated PNG export.
+              </p>
             </>
           }
         />

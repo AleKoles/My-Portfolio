@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
-        <title>Oleksandra | UX Engineer | Design Systems & Frontend</title>
+        <title>Oleksandra Kolesnikova | UX Engineer | Product Designer | Systems Architect</title>
         <meta
           name="description"
           content="UX Engineer specializing in Design Systems and Frontend Development. Expert in React, TypeScript, Tailwind, Storybook, and WCAG 2.2 accessibility."
@@ -64,7 +64,7 @@ export default function Home() {
                 Kolesnikova
               </h1>
               <span className="hidden lg:inline opacity-60 ml-3 font-medium tracking-normal normal-case text-sm dark:text-slate-400 border-l border-slate-300 dark:border-slate-700 pl-3">
-                UX Engineer
+              Product Designer | UX Engineer | Systems Architect
               </span>
             </div>
 

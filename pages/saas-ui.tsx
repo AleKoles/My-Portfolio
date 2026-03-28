@@ -47,10 +47,12 @@ export default function SaasUiCard() {
             </div>
 
             <p className="text-slate-700 dark:text-slate-200 text-base md:text-lg leading-relaxed">
-              An accessibility-first component system engineered for complex SaaS interfaces. 
-              I leveraged this architecture to build a <strong>custom Medusa.js Admin Panel</strong>, 
-              mapping high-density commerce data to a fully tokenized, multi-themed UI 
-              validated against WCAG 2.2 standards.
+              An accessibility-first component system designed for complex SaaS interfaces. 
+              I used this component collection to build a <strong>custom Medusa.js Admin Panel</strong>, 
+              translating high-density commerce data into a token-driven, multi-theme UI aligned with WCAG 2.2 standards. 
+              By redesigning the default admin experience, I optimized user flows and reduced multi-step interactions, 
+              shortening user journeys by several clicks. 
+              See the full <a className="text-sky-700 dark:text-amber-400 hover:underline duration-150 ease-in-out" href="https://designengineer.notion.site/Portfolio-Oleksandra-Kolesnikova-UX-Engineer-Design-Systems-31065fba42288006af6fe357f8f6423c?pvs=143" target="_blank" rel="noreferrer noopener" aria-label="Notion Case Study" >case study</a> for more details.
             </p>
 
             {/* Tags */}
