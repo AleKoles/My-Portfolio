@@ -99,7 +99,7 @@ export default function SaasUiCard() {
             {/* Links */}
             <nav className="flex flex-wrap gap-4 mt-2" aria-label="Project links">
               <a
-                href="https://saas-ui-delta.vercel.app/"
+                href="https://ht-admin-design-system.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center font-bold px-6 py-2.5 rounded-full
