@@ -35,7 +35,7 @@ const ProjectCard = ({ image, alt, title, description, href }: ProjectCardProps)
         </div>
 
         {/* Content Layer */}
-        <div className="relative p-6 flex flex-col gap-3 z-10">
+        <div className="relative p-4 sm:p-6 flex flex-col gap-2 sm:gap-3 z-10">
           <h4 className="text-xl md:text-2xl font-bold text-white tracking-tight drop-shadow-md">
             {title}
           </h4>
@@ -95,7 +95,7 @@ const Works = () => {
           href="https://s-art.work/"
           description={
             <>
-              High-performance storefront built with MODX, Alpine.js, and GSAP, focused on fluid state transitions and scalable component logic.
+              High-performance e-commerce platform built with MODX, Alpine.js, and GSAP, focused on fluid state transitions and smooth interaction patterns across complex user flows.
             </>
           }
         />
@@ -108,7 +108,7 @@ const Works = () => {
           description={
             <>
               <p>
-                Bilingual SPA for a creative agency, built with React and Tailwind CSS, featuring high-performance GSAP animations.
+                B2B platform built with React and Tailwind, focused on modular UI structure, performance, and maintainable component architecture across a bilingual experience.
               </p>
             </>
           }
@@ -122,7 +122,7 @@ const Works = () => {
           description={
             <>
               <p>
-              React multipage platform with custom tools, including a Kindle Cover Guide Generator with automated PNG export.
+              Product-focused platform with custom tools, including a Kindle Cover Generator designed to streamline content creation workflows through automated export logic.
               </p>
             </>
           }

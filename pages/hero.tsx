@@ -263,9 +263,9 @@ const Hero = () => {
       {/* Value Proposition */}
       <div className="max-w-4xl flex flex-col gap-4 mx-auto text-center px-6">
         <p className="text-lg lg:text-xl text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
-        I’m a Product Designer and UX Engineer specializing in Design Systems and scalable UI architecture. I work across the full product lifecycle—from shaping user experiences to designing the underlying systems that power them.
+        I design and scale production design systems.
         </p>
-        <p className="text-lg lg:text-xl text-slate-700 dark:text-slate-300 leading-relaxed font-medium">Rather than focusing only on UI, I define the logic, tokens, and component structures that ensure consistency, accessibility, and scalability across products. By bridging Figma variables with React and Tailwind implementations, I reduce design–development friction and help teams turn design intent into production-ready interfaces.</p>
+        <p className="text-lg lg:text-xl text-slate-700 dark:text-slate-300 leading-relaxed font-medium">Product Designer & UX Engineer working across Figma and React to build token-driven systems, component libraries, and scalable UI architecture adopted across product teams.</p>
       </div>
     </section>
   );

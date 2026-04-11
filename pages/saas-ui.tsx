@@ -19,11 +19,11 @@ export default function SaasUiCard() {
       {/* Header */}
       <div className="text-center pb-8">
         <h3 className="font-bold text-2xl md:text-3xl py-2 dark:text-white uppercase tracking-tighter opacity-90">
-          SaaS Component Architecture
+        Design System & SaaS UI Architecture
         </h3>
 
         <p className="dark:text-white/80 text-slate-700 md:text-lg max-w-2xl mx-auto">
-          A design system for complex SaaS interfaces, extended into a production Medusa.js admin panel.
+        A production-focused design system for complex SaaS interfaces, built and validated through a Medusa.js admin platform.
         </p>
       </div>
 
@@ -62,24 +62,24 @@ export default function SaasUiCard() {
             </div>
 
             {/* Description */}
-
-              <p className="text-slate-700 dark:text-slate-200 text-base md:text-lg leading-relaxed">
-              An accessibility-first component system designed for high-density SaaS interfaces,
-              built with strict token-based architecture and WCAG 2.2 constraints.
+            <p className="text-slate-700 dark:text-slate-200 text-base md:text-lg leading-relaxed">
+              An accessibility-first design system built for high-density SaaS environments, based on a strict token architecture and WCAG 2.2 standards.
 
               <br /><br />
 
-              The design system is fully defined and documented, with a growing component library
-              currently being implemented across a WIP Medusa.js admin interface.
+              I designed and implemented the system in Storybook using React and TypeScript, defining reusable components, interaction patterns, and a scalable architecture for complex SaaS interfaces.
 
               <br /><br />
 
-              This integration serves as a real-world validation layer for the system,
-              translating complex commerce data into a structured, multi-theme UI with consistent interaction patterns.
+              Figma was used as a validation layer to prototype interface structures, ensuring the system supports real product workflows and aligns with user needs.
 
               <br /><br />
 
-              Early integration work has already highlighted improvements in clarity and reduced interaction complexity in dense admin workflows.
+              The system is integrated into a Medusa.js admin interface, where it structures complex commerce data into clear, consistent UI patterns, reducing interaction steps and improving clarity in key admin workflows.
+
+              <br /><br />
+
+              This project functions as both a production system and a validation layer, ensuring scalability, maintainability, and alignment with real product requirements.
             </p>
 
             {/* Tags */}
@@ -117,7 +117,7 @@ export default function SaasUiCard() {
                 border-slate-300 dark:border-slate-600 rounded-full
                 text-slate-700 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition"
               >
-                Notion Case Study
+                Case Study
               </a>
 
             
