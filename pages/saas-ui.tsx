@@ -19,11 +19,11 @@ export default function SaasUiCard() {
       {/* Header */}
       <div className="text-center pb-8">
         <h3 className="font-bold text-2xl md:text-3xl py-2 dark:text-white uppercase tracking-tighter opacity-90">
-        Design System & SaaS UI Architecture
+          Design System & SaaS UI Architecture
         </h3>
 
         <p className="dark:text-white/80 text-slate-700 md:text-lg max-w-2xl mx-auto">
-        A production-focused design system for complex SaaS interfaces, built and validated through a Medusa.js admin platform.
+          A workflow-driven design system for complex SaaS products, built to reduce operational complexity and enable scalable UI development.
         </p>
       </div>
 
@@ -53,35 +53,25 @@ export default function SaasUiCard() {
             {/* Meta */}
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700 dark:text-amber-400 mb-2">
-                System Integration · 2026
+                System Ownership · 2026
               </p>
 
               <h4 className="text-2xl md:text-3xl font-bold dark:text-white leading-tight">
-                Design System × Medusa.js Admin
+                Workflow-Driven Design System for Industrial SaaS
               </h4>
             </div>
-
-            {/* Description */}
-            <p className="text-slate-700 dark:text-slate-200 text-base md:text-lg leading-relaxed">
-              An accessibility-first design system built for high-density SaaS environments, based on a strict token architecture and WCAG 2.2 standards.
-
-              <br /><br />
-
-              I designed and implemented the system in Storybook using React and TypeScript, defining reusable components, interaction patterns, and a scalable architecture for complex SaaS interfaces.
-
-              <br /><br />
-
-              Figma was used as a validation layer to prototype interface structures, ensuring the system supports real product workflows and aligns with user needs.
-
-              <br /><br />
-
-              The system is integrated into a Medusa.js admin interface, where it structures complex commerce data into clear, consistent UI patterns, reducing interaction steps and improving clarity in key admin workflows.
-
-              <br /><br />
-
-              This project functions as both a production system and a validation layer, ensuring scalability, maintainability, and alignment with real product requirements.
+            <p className="text-slate-700 dark:text-slate-200 text-sm md:text-base leading-relaxed mt-4">
+              Designed and implemented a workflow-driven, accessibility-first design system for complex SaaS environments, based on a strict token architecture (WCAG 2.2). Built in Storybook using React and TypeScript, the system defines reusable components, explicit state modeling, and scalable interaction patterns. Structured around real product workflows rather than isolated UI, it aligns frontend, backend logic, and operational processes into a unified system. Integrated into a Medusa.js admin interface, it transforms high-density commerce data into clear, consistent UI, reducing complexity and improving usability in critical workflows.
             </p>
 
+            <div className="text-slate-600 dark:text-slate-300 text-sm md:text-base mt-4">
+              <p className="font-semibold mb-1">Key Decisions</p>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Workflow-driven state modeling</li>
+                <li>Token architecture for scalability</li>
+                <li>Explicit feedback over minimal UI</li>
+              </ul>
+            </div>
             {/* Tags */}
             <div className="flex flex-wrap gap-2 py-2">
               {tags.map((tag) => (
@@ -119,8 +109,6 @@ export default function SaasUiCard() {
               >
                 Case Study
               </a>
-
-            
             </nav>
 
           </div>
