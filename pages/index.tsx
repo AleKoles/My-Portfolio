@@ -47,8 +47,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Oleksandra Kolesnikova | UX Engineer | Product Designer | Systems
-          Architect
+          Oleksandra Kolesnikova | UX Engineer | Product Designer | UI Systems Architect
         </title>
 
         <meta
@@ -61,7 +60,7 @@ export default function Home() {
 
         <meta
           name="keywords"
-          content="Design Engineer, UX Engineer, Design Systems, React, TypeScript, Medusa.js, Storybook, Tailwind CSS, Frontend Architecture"
+          content="Design Engineer, UX Engineer, Design Systems, React, TypeScript, Medusa.js, Storybook, Tailwind CSS, Frontend Architecture, Design Technologist, Design Ops, UI Systems Architect, Product Engineer (Design-focused)"
         />
 
         <meta
