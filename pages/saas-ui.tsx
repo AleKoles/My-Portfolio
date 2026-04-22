@@ -61,7 +61,7 @@ export default function SaasUiCard() {
               </h4>
             </div>
             <p className="text-slate-700 dark:text-slate-200 text-sm md:text-base leading-relaxed mt-4">
-              Designed and implemented a workflow-driven, accessibility-first design system for complex SaaS environments, based on a strict token architecture (WCAG 2.2). Built in Storybook using React and TypeScript, the system defines reusable components, explicit state modeling, and scalable interaction patterns. Structured around real product workflows rather than isolated UI, it aligns frontend, backend logic, and operational processes into a unified system. Integrated into a Medusa.js admin interface, it transforms high-density commerce data into clear, consistent UI, reducing complexity and improving usability in critical workflows.
+              Designed and implemented a workflow-driven, accessibility-first design system for complex SaaS environments, based on a strict token architecture (WCAG 2.2). Built in Storybook using React and TypeScript, the system defines reusable components (WIP), explicit state modeling, and scalable interaction patterns. Structured around real product workflows rather than isolated UI, it aligns frontend, backend logic, and operational processes into a unified system. Built for integration into a Medusa.js admin interface, it transforms high-density commerce data into clear, consistent UI, reducing complexity and improving usability in critical workflows.
             </p>
 
             <div className="text-slate-600 dark:text-slate-300 text-sm md:text-base mt-4">
