@@ -12,7 +12,7 @@ const Footer = () => {
           <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500 dark:bg-amber-500"></span>
         </span>
         <span className="text-xs md:text-sm text-sky-800 dark:text-amber-200 font-semibold tracking-wide">
-          Open to Product Design & UX Engineering roles
+        Open to UX Engineer, Design Systems, and UI Architecture roles
         </span>
       </div>
 

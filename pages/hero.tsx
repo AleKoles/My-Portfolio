@@ -208,7 +208,7 @@ const Hero = () => {
         
         <div className="inline-block px-4 py-1.5 rounded-full bg-sky-50 dark:bg-amber-900/10 border border-sky-100 dark:border-amber-900/20">
             <h3 className="font-bold text-sm md:text-lg text-sky-800 dark:text-amber-400 tracking-[0.2em] uppercase">
-            Product Designer | Design Systems & Frontend
+            UX Engineer | Design Systems & Frontend
             </h3>
         </div>
       </div>
@@ -263,9 +263,9 @@ const Hero = () => {
       {/* Value Proposition */}
       <div className="max-w-4xl flex flex-col gap-4 mx-auto text-center px-6">
         <p className="text-lg lg:text-xl text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
-        I design and scale production design systems.
+        UX Engineer (React) & Product Designer specializing in production-scale Design Systems and UI Architecture.
         </p>
-        <p className="text-lg lg:text-xl text-slate-700 dark:text-slate-300 leading-relaxed font-medium">Product Designer & UX Engineer working across Figma and React to build token-driven systems, component libraries, and scalable UI architecture adopted across product teams.</p>
+        <p className="text-lg lg:text-xl text-slate-700 dark:text-slate-300 leading-relaxed font-medium">I design and scale token-driven systems, component libraries, and frontend architecture in Figma and React, enabling consistent, reusable UI across product teams.</p>
       </div>
     </section>
   );
