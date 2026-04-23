@@ -89,7 +89,7 @@ export default function Home() {
               </h1>
 
               <span className="hidden lg:inline opacity-60 ml-3 font-medium text-sm dark:text-slate-400 border-l border-slate-300 dark:border-slate-700 pl-3">
-                Product Designer | UX Engineer | Systems Architect
+                 UX Engineer | Product Designer | Systems Architect
               </span>
             </div>
 
