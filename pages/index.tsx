@@ -47,7 +47,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Oleksandra Kolesnikova | UX Engineer | Product Designer | UI Systems Architect
+          Oleksandra Kolesnikova | Design Engineer • Design Systems Lead • Product Designer
         </title>
 
         <meta
@@ -89,7 +89,7 @@ export default function Home() {
               </h1>
 
               <span className="hidden lg:inline opacity-60 ml-3 font-medium text-sm dark:text-slate-400 border-l border-slate-300 dark:border-slate-700 pl-3">
-                 UX Engineer | Product Designer | Systems Architect
+                 Design Engineer | Product Designer | Design Systems Lead
               </span>
             </div>
 
