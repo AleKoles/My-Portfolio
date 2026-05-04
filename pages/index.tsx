@@ -115,7 +115,7 @@ export default function Home() {
               <li>
                 <Link
                   className="flex items-center gap-2 px-4 py-1.5 md:px-6 md:py-2 bg-sky-700 dark:bg-amber-400 text-white dark:text-slate-900 hover:bg-sky-800 dark:hover:bg-amber-300 rounded-full font-bold text-[12px] md:text-sm transition-all shadow-md active:scale-95"
-                  href="https://drive.google.com/uc?export=download&id=1t2ndTybEOShkNMgVD0j3LSQNwtB-yf3b"
+                  href="https://drive.google.com/uc?export=download&id=1J0DZ-a_eEdCb2kA_gfamH3ak12aelpYX"
                 >
                   <span className="tracking-widest">CV</span>
                   <IoCloudDownloadOutline className="text-xl md:text-2xl" />
